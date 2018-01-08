@@ -1,0 +1,272 @@
+.descripcion_opacity {
+	display: initial;
+}
+
+.descripcion_blur {
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+	-webkit-transition: all 1s ease-inn;
+	-webkit-transition: all 0.10s ease-out;
+	position: fixed
+}
+
+.descripcion_wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 6000;
+    width: 100%;
+    height: 100%;
+    
+	/* font-family: 'Open Sans', sans-serif; */
+    
+	background-color: rgba(246, 246, 246, 1);
+    	overflow-y: scroll;
+
+}
+.descripcion_contenido {
+	color: rgb(89, 89, 89) !important;
+	position: relative;
+	margin: auto;
+	width: 100%;
+	margin-top: 7%;
+
+	display: table!important;
+}
+.descripcion_contenido_2 { width: 25%;}
+.descripcion_contenido h2, .descripcion_contenido h3{ font-size: 20px; font-weight: 400; margin-bottom: 20px;}
+.descripcion_contenido ul {font-size: 16px; padding: 0px;}
+.descripcion_contenido ul li {}
+.descripcion_cerrar{
+	width: 50px;
+	height: 50px;
+	float: right;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 600;
+	
+}
+.descripcion_contenido h3 {font-size: 24px;}
+.descripcion_cerrar button{
+	background: rgba(115, 192, 168, 0);
+    border: 0;
+}
+.morelink button {
+	background-color: transparent;
+	border: 0px;
+	text-decoration: underline;
+}
+/* -- busqueda movil --*/
+.boton_busqueda_movil button{
+	background-color: transparent;
+	border: 0;
+	color: white;
+}
+.boton_busqueda_movil button img{
+	width: 100%;
+}
+.b_wrapper {
+background-color: rgba(255, 255, 255, 0.94);
+}
+.b_logo{
+	width: 60%;
+	position: relative;
+	margin: 0% 20%;
+	font-size: 22px;
+}
+.b_logo img{
+width: 100%;
+z-index: 100;
+top: 0;
+bottom: 0;
+position: relative;
+margin: auto;
+left: 0;
+right: 0;
+max-height: 100%;
+}
+.toptop{
+	margin-top: 20px;
+}
+.b_logo li {
+	/* width: 100%; */
+	/* padding: 12px 0px; */
+	/* text-align: center; */
+	/* font-size: 15px; */
+	list-style: none;
+	display: inline-block;
+}
+.b_logo li a {
+	color: rgb(146, 146, 146);
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+.b_logo li a:hover {
+	-webkit-transition: all .5s ease-in-out;
+
+	color: rgba(234, 81, 81, 1) !important;
+text-decoration: none;
+}
+.b_logo li a i {text-decoration: none; cursor: pointer;}
+.b_logo ul {
+	width: 100%;
+	/* text-align: center; */
+	/* height: 50px; */
+	/* position: relative; */
+	/* height: auto; */
+	margin: 0;
+	padding: 0;
+	margin-top: 30px;
+}
+.b_logo ul li {
+	/* width: auto; */
+	/* height: auto; */
+	/* float: left; */
+	padding: 20px 0px;
+	font-size: 60px;
+	display: inline-block;
+	width: 32%;
+}
+.b_button, .b_input{
+width: 80%;
+height: 40px;
+position: relative;
+margin: 0 auto;
+padding: 0;
+border: 0;
+text-transform: uppercase;
+}
+.b_input {
+margin-bottom: 20px;
+padding: 0 5%;
+width: 70%;
+}
+.b_button {
+	background: rgba(115, 192, 168, 0);
+	border:3px solid white;
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+.b_blur{
+	-webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+filter: blur(5px);
+}
+/* -- busqueda movil --*/
+/* -- login --*/
+.l_top {margin-top: 25%;}
+.l_contenido {}
+.l_contenido input {border: 1px solid gray;}
+.l_contenido button {background-color: rgb(94, 178, 153);
+border: 0px;}
+.l_contenido p {width: 80%;
+margin: 20px auto;
+font-size: 14px;
+color: rgb(165, 164, 164);}
+.l_contenido p a {width: 100%;
+text-decoration: underline;
+color: rgb(96, 94, 94);
+position: relative;
+font-size: 16px;}
+/* -- login --*/
+/* -- registro --*/
+.r_facebook{
+	background-color: rgb(65, 83, 243) !important;
+    font-size: 14px;
+}
+.r_top {
+	margin-top: 65px;
+}
+/* -- registro --*/
+
+@media only screen and (max-width:480px) {
+	.descripcion_contenido {
+		width: 100%;
+	
+		margin-top: 0px;
+}
+}
+.boton_busqueda_movil {
+float: right;
+top: 5px;
+right: 5px;
+position: fixed;
+width: 40px;
+height: 40px;
+z-index: 2100;
+display: inline;
+}
+.parpadea {
+  
+  color: white;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+}
+.loginpopup .form-group .control-label {
+	float: left !important;
+}
+.control-label {
+	float: left;
+	font-weight: 500;
+}
+
+.loginpopup button {
+	border: 0px;
+	padding: 8px 15px;
+	background-color: rgba(234, 81, 81, 1);
+	margin: 0px 5px;
+	-webkit-transition: .5s ;
+	transition: .5s;
+	color: white;
+
+	position: relative;
+	float: right;
+}
+.loginpopup button:hover {
+
+	background-color: rgb(189, 36, 75);
+	-webkit-transition: .5s ;
+	transition: .5s;
+
+}
+.loginpopup button a {
+	color: rgb(255, 255, 255);
+}
+.loginpopup button a:hover {
+	text-decoration: none !important;
+
+	color: rgb(255, 255, 255) !important;
+}

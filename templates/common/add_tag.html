@@ -1,0 +1,12 @@
+<div class="form-group">
+    <label class="control-label" style="width:100%; text-align:left">crea o selecciona un tag</label>
+    <div class="g-contenedor-tag">
+        <input name="tags" placeholder="Agregar tags..." class="form-control g-contenedor-tag" type="text"
+        value="
+        {% if tags is not None %}
+            {% for tag in tags %}
+                {{tag[0] + ','}} 
+            {% end %}
+        {% end %}">
+    </div>
+</div>

@@ -1,0 +1,158 @@
+<!-- generar contenido Perfil -->
+<div id="g-perfil-a" class="loginpopup step_two">
+    <form action="{{ site_base }}/profile/add" method="post" enctype="multipart/form-data" class="members-add-form" >
+        <!-- paso 1 -->
+        <!-- paso 2 -->
+        <input type="hidden" name="content_id" value="{% if data is not None %}{{data['id']}}{% end %}">
+        <div id="paso-uno-perfil" >
+            <div class="g-header-form">
+                <div class="g-header-button g-header-button-active" style="width:100% !important;">
+                    <h2>Ingresar datos de socia</h2>
+                </div>
+            </div>
+            <!-- content -->
+            <!-- titulo -->
+            <div class="col-sm-12 especial" style="padding: 20px 0px !important;">
+                <label class="control-label text-left" style="width: 100% !important; font-size: 20px;">DATOS PRINCIPALES</label>
+            </div>
+            <div class="col-sm-6 especial">
+                <!-- foto company -->
+                <div class="me-company-pic">
+                    <img src="{% if data is not None %}{{data['data']['company_img']['thumb_200']}}{% end %}" class="company-picture" id="profile_image_holder1">
+                </div>
+                <!-- add-image -->
+                <div>
+                    <!-- <i class="icon-plus icon-generic"></i>
+                    <img style="opacity: 0" src="" class="image-preview" id="preview-image-holder"> -->
+                    <input type="file" name="company_picture_input" class="company_picture_input form-input-hided company-add-form-input" id="profile_input_image1" multiple >
+                    <div class="company-image-prev-data hidden " >
+                        {% try %}
+                        {% if data %}
+                        [{
+                            "url" : "{{ data['data']['company_img']['url'] }}",
+                            "name" : "{{ data['data']['company_img']['name'] }}",
+                            "url" : "{{ data['data']['company_img']['url'] }}",
+                            "image" : "{{ data['data']['company_img']['image'] }}",
+                            "thumb_1" : "{{ data['data']['company_img']['thumb_1'] }}",
+                            "thumb_200" : "{{ data['data']['company_img']['thumb_200'] }}",
+                            "thumb_500" : "{{ data['data']['company_img']['thumb_500'] }}",
+                            "id" : "{{ data['data']['company_img']['id'] }}"
+                        }]
+                        {% end %}
+                        {% except %}
+                        {% end %}
+                    </div>
+                </div>
+                <div id="error_profile_photo1" for="company_picture_input" class="error" style="color: red; text-align: left; font-style: italic; display: none">Debe subir una Foto</div>
+            </div>
+            <div class="col-sm-6 especial">
+                <div class="form-group">
+                    <input name="company_name" id="profile_name_field" placeholder="Nombre" class="form-control" type="text"
+                    value="{% try %}{{data['data']['company_name'][0]}}{% except %}{% end %}">
+                    <div for="company_name" id="error_profile_name" class="error" style="color: red; text-align: left; font-style: italic; display: none">Ingrese un nombre. Max 50 caracteres. Actualmente tienes X</div>
+                </div>
+                <!-- <div class="form-group">
+                    <input name="company_position" id="company_position" placeholder="Cargo/Empresa" class="form-control" type="text"
+                    value="{% try %}{{data['data']['company_position'][0]}}{% except %}{% end %}">
+                    <div for="company_position" id="error_company_position" class="error" style="color: red; text-align: left; font-style: italic; display: none">Debe ingresar un cargo/empresa</div>
+                </div> -->
+                <div class="form-group">
+                    <input name="email" id="profile_mail_field" placeholder="E-mail" class="form-control" type="text"
+                    value="{%if data is not None %}{% if 'data' in data %}{{data['data']['email'][0]}}{% end %}{% end %}">
+                    <div for="email" id="error_profile_mail" class="error" style="color: red; text-align: left; font-style: italic; display: none">Debe ingresar un mail válido</div>
+                </div>
+            </div>
+            <div class="col-sm-12 especial" style="padding: 20px 0px !important;">
+                <label class="control-label text-left" style="width: 100% !important; font-size: 20px;">DATOS SECUNDARIOS</label>
+            </div>
+            <div class="col-sm-6 especial">
+                <!-- foto socia -->
+                <div class="me-partner-pic">
+                    <img src="{% if data is not None %}{% if 'profile_img' in data['data'] %}{{data['data']['profile_img']['thumb_200']}}{% end %}{% end %}" class="profile-picture" id="profile_image_holder2">
+                </div>
+                <!-- add-image -->
+                <div>
+                    <!-- <i class="icon-plus icon-generic"></i>
+                    <img style="opacity: 0" src="" class="image-preview" id="preview-image-holder"> -->
+                    <input type="file" name="profile_picture_input" class="profile_picture_input form-input-hided" id="profile_input_image2" multiple >
+                    <div class="profile-image-prev-data hidden" >
+                        {% try %}
+                        {% if data %}
+                        [{
+                            "url" : "{{ data['data']['profile_img']['url'] }}",
+                            "name" : "{{ data['data']['profile_img']['name'] }}",
+                            "url" : "{{ data['data']['profile_img']['url'] }}",
+                            "image" : "{{ data['data']['profile_img']['image'] }}",
+                            "thumb_1" : "{{ data['data']['profile_img']['thumb_1'] }}",
+                            "thumb_200" : "{{ data['data']['profile_img']['thumb_200'] }}",
+                            "thumb_500" : "{{ data['data']['profile_img']['thumb_500'] }}",
+                            "id" : "{{ data['data']['profile_img']['id'] }}"
+                        }]
+                        {% end %}
+                        {% except %}
+                        {% end %}
+                    </div>
+
+                </div>
+                <div id="error_profile_photo2" for="profile_picture_input" class="error" style="color: red; text-align: left; font-style: italic; display: none ">Debe subir una Foto</div>
+            </div>
+            <div class="col-sm-6 especial">
+                <div class="form-group">
+                    <input name="name" id="" placeholder="Nombre socia" class="form-control" type="text" value="{%if data is not None %}{% if 'data' in data and 'name' in data['data'] %}{{data['data']['name'][0]}}{% end %}{% end %}">
+                    <div for="name" id="" class="error" style="color: red; text-align: left; font-style: italic; display: none">Ingrese un nombre. Max 50 caracteres. Actualmente tienes X</div>
+                </div>
+                <div class="form-group">
+                    <input name="position" id="" placeholder="Cargo" class="form-control" type="text"
+                    value="{%if data is not None %}{% if 'data' in data and 'position' in data['data'] %}{{data['data']['position'][0]}}{% end %}{% end %}">
+                    <div for="position" id="" class="error" style="color: red; text-align: left; font-style: italic; display: none">Debe ingresar un mail válido</div>
+                </div>
+            </div>
+            <div class="col-sm-12 especial" style="padding: 20px 0px !important;">
+                <label class="control-label text-left" style="width: 100% !important; font-size: 20px;">DESCRIPCIÓN</label>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Describe el emprendimiento" name="description_company" class="form-control">
+                {%if data is not None %}{% if 'data' in data %}{{data['data']['description_company'][0]}}{% end %}{% end %}
+                </textarea>
+                <div for="description_company" class="error" style="color: red; text-align: left; font-style: italic; display: none">Debe ingresar una descripcion</div>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Describe el perfil" name="description" class="form-control" >
+                    {%if data is not None %}{% if 'data' in data and 'description' in data['data'] %}{{data['data']['description'][0]}}{% end %}{% end %}
+                </textarea>
+                <div for="description" class="error" style="color: red; text-align: left; font-style: italic; display: none">Debe ingresar una descripcion</div>
+            </div>
+            <div class="col-sm-12 especial" style="padding: 20px 0px !important;">
+                <label class="control-label text-left" style="width: 100% !important; font-size: 20px;">OTROS DATOS</label>
+            </div>
+            <div class="form-group">
+                <input name="phone" placeholder="Teléfono" class="form-control" type="text" value="{%if data is not None %}{% if 'data' in data %}{{data['data']['phone'][0]}}{% end %}{% end %}">
+                <div for="phone" id="error_profile_phone" class="error" style="color: red; text-align: left; font-style: italic; display: none">Debe ingresar un número válido</div>
+            </div>
+            <div class="form-group">
+                <input name="url" placeholder="http://www." class="form-control" type="text" value="{%if data is not None %}{% if 'data' in data %}{{data['data']['url'][0]}}{% end %}{% end %}">
+                <div for="url" id="error_profile_phone" class="error" style="color: red; text-align: left; font-style: italic; display: none">Debe ingresar una url valida</div>
+            </div>
+            {% try %}
+                {% module Template('common/add_tag.html', tags=data['tag_list']) %}
+            {% except %}
+                {% module Template('common/add_tag.html', tags=None) %}
+            {% end %}
+            <button id="producto-volver-7"><a>volver</a></button>
+            <button id=""><a>archivar</a></button>
+            <button id=""><a>previsualizar</a></button>
+            <button type="submit" id ="submit_profile_form">publicar</button>
+        </div>
+    </form>
+    <!-- paso 2 -->
+</div>
+<script type="text/javascript">
+// try
+// {
+//     new AddProfileController();
+// }
+// catch(ex)
+// {
+//     // nothing here
+// }
+</script>

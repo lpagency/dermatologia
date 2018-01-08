@@ -1,0 +1,84 @@
+<div id="g-articulo-a" class="loginpopup step_two">
+    <form action="{{ site.url }}article/add" method="post" enctype="multipart/form-data" class="article-add-form" >
+        <div class="g-header-form">
+            <div class="g-header-button g-header-button-active">
+                <h2>NUEVO ARTÍCULO</h2>
+            </div>
+            <div class=" g-header-button">
+                <h2>BORRADORES</h2>
+            </div>
+        </div>
+        <input type="hidden" name="content_id" value="{% if data is not None %}{{data.id}}{% end %}">
+        <div class="form-group required">
+            <label class="control-label">Título</label>
+            <input name="title" id="article_title_field" placeholder="Ingresa un título para el artículo" class="form-control" type="text" maxlength="50"
+            value="{% if data is not None %}{{data.title}} {% end %}">
+            <div id="error_article_title" for="title" class="error g-alert" >Ingrese un título. Max 50 caracteres. Actualmente tienes X</div>
+        </div>
+        <div class="form-group required">
+            <label class="control-label">Bajada</label>
+            <input name="caption" id="article_bajada_field" placeholder="Ingresa una frase destacada para el artículo" class="form-control" type="text"
+            value="{% if data is not None %}{{data.caption}} {% end %}">
+            <div id="error_article_bajada" for="caption" class="error g-alert" >Ingrese un texto. Máximo de 500 caracteres. Actualmente tienes X</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Texto</label>
+            <div class="controls">
+                <textarea class="textboxio" name="text">
+                {% if data is not None %}
+                {{data.description}}
+                {% end %}
+                </textarea>
+            </div>
+        </div>
+        <div class="form-group required">
+            <label class="control-label" id="image-selector-ui-label">Agregar Foto</label>
+            <!--a class="fancybox" rel="group" href="http://images4.fanpop.com/image/photos/18200000/LOL-lol-18231617-735-643.jpg"><img src="http://images4.fanpop.com/image/photos/18200000/LOL-lol-18231617-735-643.jpg" alt="" /></a
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+            -->
+
+            <input id="input-position-x" type="hidden" name="offset_x" />
+            <input id="input-position-y" type="hidden" name="offset_y" />
+            <div id="article-image-fullsize-div" style = "display: none; float: left">
+                <div id="image-fullsize-holder" style="position:relative"> 
+                    <!--img src ="{{ site_base }}/static/images/spot_mark.png" id="article-highlight-mark" style="position: absolute;"></img-->
+                    <i class="fa fa-dot-circle-o" id="article-highlight-mark" style="position: absolute; color: rgb(255,0,0); font-size: 150%; display: none;"></i> 
+                    <img src="" id="article-image-fullsize"/>
+                </div>
+                <div style="float: left">
+                    <button id="button-done-highlight"><a>Hecho</a></button>
+                </div>
+            </div>
+            <div id="image-selector-ui">
+                <input type="file" name="image" class="content-add-form-input" id="article-input-image" multiple />
+
+
+                <div class="content-add-form-prev-data hidden" >
+                    {% if data is not None %}{{ data.getJSONImageList() }}{% end %}
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="error_article_photo" for="image" class="error g-alert">Debe subir una Foto | la foto debe ser .png</div>
+
+        {% if data is not None %}
+            {% set tags = data.tag_list %}
+        {% else %}
+            {% set tags = None %}
+        {% end %}
+        {% module Template('common/add_tag.html', tags=tags) %}
+
+        <div class="clearfix"></div>
+        <div class="form-group">
+            <button id="articulo-volver"><a>volver</a></button>
+            <button><a>archivar</a></button>
+            <button><a>previsualizar</a></button>
+            <button id="submit_article_form">publicar</button>
+        </div>
+        <input type="hidden" id="image-preview" value="{% if data is not None %}{{data.image.url}}{% end %}">
+    </form>
+</div>
+<!-- generar artículo -->

@@ -1,0 +1,19 @@
+<div {% if box_counter != 0 %}data-sr{% end %} class="col-sm-12 sobre-botones caja-s" id="box-display">
+    <div class="cont-modifi" style="background:url('{{ cnt["thumb_1"] }}')" >
+        {% include box_menu.html %}
+        <a href="{{ site_base }}/event/detail/url_amigable/{{ cnt["id"] }}">
+            <div class="cont-boxes" style="background:url('{{ cnt["thumb_1"] }}')" >
+                <div class="box-event">
+                    <div class="vertical-center-cont">
+                          <div class="box-event-date">
+                                <h3>{% try %}{{ cnt["begin"].strftime("%d") }}{% except %}{% end %}</h3> 
+                                <p>{% try %}{{ cnt["begin"].strftime("%b") }}{% except %}{% end %}</p> 
+                          </div>
+                          <h2 class="box-event-h2">{{ cnt["title"] }}</h2>
+                        </div>
+                </div>
+                <img src="{{ cnt["thumb_1"] }}" thumb="{{ cnt["thumb_1"] }}" offsetx="{{ cnt["offset_x"] }}" offsety="{{ cnt["offset_y"] }}" data-original="{{ cnt["thumb_200"] }}" class="lazy " alt="item" />
+            </div>
+        </a>
+    </div>
+{% if is_admin %}{% include box_edit_menu.html %}{% end %}</div>

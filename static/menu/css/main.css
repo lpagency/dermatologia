@@ -1,0 +1,194 @@
+
+.button-nav-toggle {
+font-size: 1.3em;
+border: 0;
+/* color: rgb(80,80,80); */
+background-image: url();
+cursor: pointer;
+position: fixed;
+left: 0;
+top: 0;
+transition: left .25s ease-in-out;
+z-index: 40000;
+opacity: 1;
+background-color: rgba(255, 0, 0, 0);
+
+}
+.button-nav-toggle:focus {
+  outline: none !important;
+}
+.button-nav-toggle-2 {
+  font-size: 1.3em;
+  border: 0;
+  color: #000;
+  cursor: pointer;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.nav-main {
+  transition: left .25s ease-in-out;
+  background-color: rgba(246, 246, 246, 0.9);
+  position: fixed;
+  overflow-x: hidden;
+  width: 280px;
+  left: -280px;
+  top: 0;
+  bottom: 0;
+  z-index: 4000;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(80, 80, 80);
+}
+
+.nav-main .nav-container {
+  transition: left .25s ease-in-out;
+  position: relative;
+  left: 0;
+  text-align: left;
+}
+
+.nav-main .nav-container.show-sub { left: -280px }
+
+.nav-main .nav-container ul {
+  margin: 0px;
+  padding: 10px 20px;
+}
+
+.nav-main .nav-container ul li {
+  list-style: none;
+  
+}
+
+.nav-main .nav-container ul li a {
+  text-decoration: none;
+  display: block;
+  color: rgb(95, 95, 95);
+}
+
+.nav-main .nav-container ul li a:hover { color: #8F8F8F }
+
+.nav-main .nav-container ul li ul {
+  display: none;
+  width: 280px;
+  position: absolute;
+  right: -280px;
+  top: 0
+}
+
+.nav-main .nav-container ul li ul li { border: 0 }
+
+.nav-main .nav-container ul li ul li.nav-label {
+  border-top: 1px solid #d5d7da;
+  padding: 25px 0 10px
+}
+
+.nav-main .nav-container ul li ul li a {
+  padding: 7px 0 15px;
+  font-size: 14px
+}
+
+.nav-main .nav-container ul li ul li a.back {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  background: url(/static/menu/images/arrow-left.png) right center no-repeat;
+}
+
+/* @todo: uncomment once implemented; */
+/*.nav-main .nav-container ul li.has-sub-nav a { background: url(/static/menu/images/arrow-right.png) right center no-repeat }*/
+
+.nav-main .nav-container ul li.has-sub-nav ul a { background: 0 0 }
+
+.nav-main .nav-container ul li.active ul { display: block }
+
+.open .nav-main { left: 0 }
+
+*,
+:after,
+:before { /* box-sizing: border-box  */}
+
+
+.page-wrapper {
+  max-width: 1040px;
+  margin: 0 auto
+}
+
+.header-main {
+  overflow: hidden;
+  padding: 20px 0
+}
+
+.section-stage {
+  background: #B8B8B8;
+  width: 100%;
+  height: 500px
+}
+
+.main {
+  transition: right .25s ease-in-out;
+  position: relative;
+  right: 0
+}
+
+.main.open { right: 280px }
+/* --- clases agragadas por jose --- */
+.menu-ti{font-weight: 700; font-size: 18px; padding: 20px 0px;}
+.menu-st{font-weight: 700; font-size: 16px; padding: 0px 0px 15px 5px;}
+.menu-te{font-weight: 300;font-size: 14px; padding: 0px 0px 10px 10px;}
+.blur {
+  filter: blur(2px);
+-webkit-filter: blur(2px);
+-moz-filter: blur(2px);"
+}
+.open-2 {
+ left: 280px;
+
+}
+.btn-menu-top{
+  margin-top: 20px;
+}
+.btn-menu {
+   width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(85, 85, 85);
+  padding: 10px 0px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 0px;
+  color: rgb(85, 85, 85);
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-menu:hover {
+  background-color: rgb(85, 85, 85);
+  color: white;
+}
+.btn-menu:focus {
+  outline: none;
+}
+.campo_guardar {
+  width: 100%;
+  margin: 0px auto;
+  border: 0px solid white;
+  padding: 15px;
+}
+.campo_guandar_input {
+  width: 100%;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  background-color: rgb(69, 69, 69);
+  color: white;
+  border: 0px;
+}
+.campo_guardar_input-2{
+width: 100%;
+padding: 20px 0px;
+background-color: rgba(34,34,34,0.9);
+color: white;
+border: 1px solid white;
+text-transform: uppercase;
+cursor: pointer;
+}

@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-sm-8 especial">
+        {% if len(content) >= 1 %}
+            {{ contentType('xl', content[0], box_counter, site_base) }}
+        {% end %}
+    </div>
+    <div class="col-sm-4 especial">
+        {% if len(content) >= 2 %}
+            {{ contentType('m', content[1], box_counter, site_base) }}
+        {% end %}
+        <!-- content -->
+        {% if len(content) >= 3 %}
+            {{ contentType('m', content[2], box_counter, site_base) }}
+        {% end %}
+    </div>
+</div>

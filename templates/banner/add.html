@@ -1,0 +1,51 @@
+<!-- generar banner -->
+<div id="g-banner-a" class="loginpopup step_two banner-add-form">
+    <form action="{{ site_base }}/banner/add" method="post" enctype="multipart/form-data">
+        <div class="g-header-form">
+            <div class="g-header-button g-header-button-active">
+                <h2>NUEVO BANNER</h2>
+            </div>
+            <div class=" g-header-button">
+                <h2>BORRADORES</h2>
+            </div>
+        </div>
+        <input type="hidden" name="content_id" value="{% if data is not None %}{{data.id}}{% end %}">
+        <div class="form-group required">
+            <label class="control-label">Agregar Foto</label>
+<!--             <div class="form-added-image">
+                <i class="icon-remove" id="banner_input_image_button"></i>
+                <img src="" class="image-preview" id="banner_image_holder"/>
+            </div> -->
+            <div>
+                <input type="file" name="image" class="form-input-hided content-add-form-input" id="banner_input_image" />
+
+                <div class="content-add-form-prev-data hidden" >
+                    {% if data is not None %}{{ data.getJSONImageList() }}{% end %}
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="error_banner_photo" for="image" class="error g-alert" >Debe subir una Foto</div>
+        <div class="clearfix"></div>
+        <div class="form-group required">
+            <label class="control-label">url</label>
+            <input name="url" id="banner_url_field" placeholder="Ingresar direcci&oacute;n web" class="form-control" type="text" value="{% if data is not None %}{{ data.url or ''}}{% end %}">
+            <div id="error_banner_url" for="url" class="error g-alert">Ingresar url completa. Debe comenzar con http:// o https://</div>
+        </div>
+        {% if data is not None %}
+            {% set tags = data.tag_list %}
+        {% else %}
+            {% set tags = None %}
+        {% end %}
+        {% module Template('common/add_tag.html', tags=tags) %}
+
+        <div class="clearfix"></div>
+        <div class="form-group">
+            <button id="producto-volver-3"><a>volver</a></button>
+            <button><a>archivar</a></button>
+            <button><a>previsualizar</a></button>
+            <button type="submit" id="submit_banner_form">publicar</button>
+        </div>
+    </form>
+</div>
+<!-- generar banner -->

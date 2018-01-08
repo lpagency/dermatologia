@@ -1,0 +1,1337 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- head bt inicio -->
+        <title>ME</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/cssbt/style.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/cssbt/icomoon/style.css">
+        <!-- css para estilos de cajas de contenido -->
+        <link rel="stylesheet" href="{{ site_base }}/static/cssbt/cont-boxes-home.css">
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/font-awesome.min.css" />
+        <link rel="shortcut icon" href="{{ site_base }}/static/imgbt/ico/32.png" sizes="32x32" type="{{ site_base }}/static/imagebt/png" />
+        <link rel="apple-touch-icon-precomposed" href="imgbt/ico/60.png" type="image/png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site_base }}/static/imgbt/ico/72.png" type="image/png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ site_base }}/static/imgbt/ico/120.png" type="image/png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site_base }}/static/imgbt/ico/152.png" type="image/png" />
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+        <!-- <link rel="stylesheet" href="{{ site_base }}/static/css/custom_bootstrap.css"> -->
+        <!-- menu editor css -->
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/main.css" type="text/css">
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/wallop-slider--slide.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/wallop-slider.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/menu/css/colpick.css">
+        <!-- menu editor css -->
+        <link rel="stylesheet" href="{{ site_base }}/static/css/menu-material-2.css">
+        <!-- <link rel="stylesheet" href="{{ site_base }}/static/css/store.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/simplePagination.css"> -->
+        <link rel="stylesheet" href="{{ site_base }}/static/css/ligthbox-d.css">
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body id="home">
+        <!-- generar contenido y formularios -->
+        <div id="menu_movil" class="descripcion_wrapper descripcion_opacity b_wrapper" style="display:none;">
+            <div class="descripcion_cerrar">
+                <button id="tellmeboton2" style="font-size: 35px; color:gray !important"><i class="icon-remove"></i></button>
+            </div>
+            <div class="descripcion_contenido">
+                <div class="b_logo">
+                    <h1>ELIGE UN TIPO DE CONTENIDO PARA CREAR</h1>
+                    <ul>
+                        <li><a id="g-contenido" class="redes_sociales"><i class="fa icon-shopping-cart" ></i><p>Producto</p></a></li>
+                        <li><a id="g-articulo" class="redes_sociales"><i class="fa icon-file-text-alt"></i> <p> Articulo </p> </a></li>
+                        <li><a id="g-banner" class="redes_sociales"><i class="fa icon-picture"></i> <p> Banner </p> </a></li>
+                        <li><a id="g-evento" class="redes_sociales"><i class="fa icon-glass"></i> <p> Evento </p> </a></li>
+                        <li><a id="g-galeria" class="redes_sociales"><i class="fa icon-camera"></i> <p> Galeria </p> </a></li>
+                        <li><a id="g-perfil" class="redes_sociales"><i class="fa icon-user"></i> <p> Perfil </p> </a></li>
+                    </ul>
+                </div>
+                <!-- generar contenido producto -->
+                <div id="g-contenido-a" class="loginpopup">
+                    <div style="width:100%;float:left;margin-bottom: 30px;">
+                        <div style="width:50%; float:left; border:1px solid gray;height: auto; float: left;">
+                            <h2>NUEVO PRODUCTO</h2>
+                        </div>
+                        <div id="g-borradores" style="width:50%; float:left; cusor:pointer;">
+                            <h2>BORRADORES</h2>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Nombre producto</label>
+                        <input required name="address" id="InputAddress" placeholder="Nombre" class="form-control" type="text">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Foto</label>
+                        <input required name="address" id="InputAddress" placeholder="máximo 5 fotos" class="form-control" type="text">
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="width:100%;text-align:left;">Descripci&oacute;n</label>
+                        <div class="controles-editor-texto">
+                        </div>
+                        <div class="controls">
+                            <textarea name="comments" placeholder="ingresa una descripci&oacute;n para tuproducto" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group required" style="width:45%; float:left; margin-right:5%;">
+                        <label class="control-label">Precio</label>
+                        <input required name="address" id="InputAddress" placeholder="$" class="form-control" type="text">
+                    </div>
+                    <div class="form-group required" style="width:50%; float:left;">
+                        <label class="control-label">cantidad</label>
+                        <input required name="address" id="InputAddress" placeholder="1" class="form-control" type="text">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">crear o seleccionar tag</label>
+                        <select name="city_id" id="InputCity" class="form-control">
+                            <option value="">Selecciona un tag</option>
+                            <option value="">Belleza</option>
+                            <option value="">Cuerpo</option>
+                            <option value="">Arte</option>
+                            <option value="">Zapatos</option>
+                        </select>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+                        <div class="g-contenedor-tag">
+                            <div class="g-contenedor-tag-seleccionado">
+                                <div style="float:left">belleza</div>
+                                <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="producto-volver"><a>volver</a></button>
+                    <button><a>archivar</a></button>
+                    <button><a>previsualizar</a></button>
+                    <button><a href="http://localhost:8513/product/Botin/Jabiru/brushoff%20morado">publicar</a></button>
+                </div>
+                <!-- generar contenido producto-->
+                <!-- lista borradores -->
+                <div id="g-borradores-a" class="loginpopup">
+                    <div style="width:100%;float:left;margin-bottom: 30px;">
+                        <div class="producto-volver-b" style="width:50%; float:left; ">
+                            <h2>NUEVO PRODUCTO</h2>
+                        </div>
+                        <div style="width:50%; float:left;border:1px solid gray;height: auto; float: left;">
+                            <h2>BORRADORES</h2>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%;text-align:left;">Producto uno</label>
+                        <input required name="address" id="InputAddress" placeholder="Titulo" class="form-control" type="checkbox">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%;text-align:left;">Producto dos</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="width:100%;text-align:left;">Producto tres</label>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%;text-align:left;">Producto cinco</label>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%;text-align:left;">Producto seis</label>
+                    </div>
+                    <button class="producto-volver-b"><a>volver</a></button>
+                    <button><a>previsualizar</a></button>
+                    <button><a>Publicar</a></button>
+                </div>
+                <!-- generar contenido -->
+                <!-- generar artículo -->
+                <div id="g-articulo-a" class="loginpopup">
+                    <div style="width:100%;float:left;margin-bottom: 30px;">
+                        <div style="width:50%; float:left; border:1px solid gray;height: auto; float: left;">
+                            <h2>NUEVO ARTICULO</h2>
+                        </div>
+                        <div style="width:50%; float:left;">
+                            <h2>BORRADORES</h2>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Título</label>
+                        <input required name="address" id="InputAddress" placeholder="Titulo" class="form-control" type="text">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">lead</label>
+                        <input required name="address" id="InputAddress" placeholder="Sube un archivo" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Texto</label>
+                        <div class="controls">
+                            <textarea name="comments" placeholder="ingresa tu texto" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Foto</label>
+                        <input required name="address" id="InputAddress" placeholder="Sube un archivo" class="form-control" type="text">
+                        <div style="width:50px;height:50px; float:left; background-color: gray; color: gray; margin:10px 5px 5px 5px; text-align: right; padding: 7px;font-size: 18px;line-height: 0.4;"><span>x</span></div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%;text-align:left;">crear o seleccionar tag</label>
+                        <select name="city_id" id="InputCity" class="form-control">
+                            <option value="">Selecciona un tag</option>
+                            <option value="">tag</option>
+                            <option value="">tag</option>
+                            <option value="">tag</option>
+                            <option value="">tag</option>
+                        </select>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+                        <div class="g-contenedor-tag">
+                            <div class="g-contenedor-tag-seleccionado">
+                                <div style="float:left">belleza</div>
+                                <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="articulo-volver"><a>volver</a></button>
+                    <button><a>archivar</a></button>
+                    <button><a>previsualizar</a></button>
+                    <button><a href="/article">publicar</a></button>
+                </div>
+                <!-- generar artículo -->
+                <!-- generar banner -->
+                <div id="g-banner-a" class="loginpopup">
+                    <div style="width:100%;float:left;margin-bottom: 30px;">
+                        <div style="width:50%; float:left; border:1px solid gray;height: auto; float: left;">
+                            <h2>NUEVO BANNER</h2>
+                        </div>
+                        <div style="width:50%; float:left;">
+                            <h2>BORRADORES</h2>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Foto</label>
+                        <input required name="address" id="InputAddress" placeholder="Subir un archivo" class="form-control" type="text">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">url</label>
+                        <input required name="address" id="InputAddress" placeholder="Ingresar direcci&oacute;n web" class="form-control" type="text">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">crear o seleccionar tag</label>
+                        <select name="city_id" id="InputCity" class="form-control">
+                            <option value="">Selecciona un tag</option>
+                            <option value="">Belleza</option>
+                            <option value="">Cuerpo</option>
+                            <option value="">Arte</option>
+                            <option value="">Zapatos</option>
+                        </select>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+                        <div class="g-contenedor-tag">
+                            <div class="g-contenedor-tag-seleccionado">
+                                <div style="float:left">belleza</div>
+                                <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="producto-volver-3"><a>volver</a></button>
+                    <button><a>archivar</a></button>
+                    <button><a>previsualizar</a></button>
+                    <button><a href="/">publicar</a></button>
+                </div>
+                <!-- generar banner -->
+                <!-- generar evento -->
+                <div id="g-evento-a" class="loginpopup">
+                    <div style="width:100%;float: left;margin-bottom: 30px;">
+                        <div style="width:50%; float:left; border:1px solid gray;height: auto; ">
+                            <h2>NUEVO EVENTO</h2>
+                        </div>
+                        <div style="width:50%; float:left;">
+                            <h2>BORRADORES</h2>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Nombre evento</label>
+                        <input required name="address" id="InputAddress" placeholder="Ingrsar nombre de evento" class="form-control" type="text">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Foto</label>
+                        <input required name="address" id="InputAddress" placeholder="Subir un archivo" class="form-control" type="text">
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%;text-align:left;">Texto</label>
+                        <textarea required name="address" id="InputAddress" placeholder="Ingresa la informacion del evento" class="form-control" type="textarea"></textarea>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">fecha</label>
+                        <select name="city_id" id="InputCity" class="form-control">
+                            <option value="">seleccionar dia</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                        </select>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Sumar formulario</label>
+                        <input required name="address" id="InputAddress" placeholder="Pegar url de formulario correspondiente..." class="form-control" type="text">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">crear o seleccionar tag</label>
+                        <select name="city_id" id="InputCity" class="form-control">
+                            <option value="">Selecciona un tag</option>
+                            <option value="">tag</option>
+                            <option value="">tag</option>
+                            <option value="">tag</option>
+                            <option value="">tag</option>
+                        </select>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+                        <div class="g-contenedor-tag">
+                            <div class="g-contenedor-tag-seleccionado">
+                                <div style="float:left">belleza</div>
+                                <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="producto-volver-4"><a>volver</a></button>
+                    <button><a>archivar</a></button>
+                    <button><a>previsualizar</a></button>
+                    <button><a href="/event">publicar</a></button>
+                </div>
+                <!-- generar evento-->
+                <!-- generar contenido galeria -->
+                <div id="g-galeria-a" class="loginpopup">
+                    <div style="width:100%;float:left;margin-bottom: 30px;">
+                        <div style="width:50%; float:left; border:1px solid gray;height: auto; float: left;">
+                            <h2>NUEVA GALERIA</h2>
+                        </div>
+                        <div style="width:50%; float:left;">
+                            <h2>BORRADORES</h2>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Nombre galería</label>
+                        <input required name="address" id="InputAddress" placeholder="Nombre" class="form-control" type="text">
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">Seleccione Fotografias</label>
+                        <input required name="address" id="InputAddress" placeholder="Fotos para el producto" class="form-control" type="text">
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                        <div class="g-foto-miniatura"><span>x</span></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" style="width:100%;text-align:left;">Descripci&oacute;n</label>
+                        <div class="controls">
+                            <textarea name="comments" placeholder="ingresa una descripci&oacute;n para tuproducto" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label">crear o seleccionar tag</label>
+                        <select name="city_id" id="InputCity" class="form-control">
+                            <option value="">Agregar tags</option>
+                            <option value="">tag</option>
+                            <option value="">tag</option>
+                            <option value="">tag</option>
+                            <option value="">tag</option>
+                        </select>
+                    </div>
+                    <div class="form-group required">
+                        <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+                        <div class="g-contenedor-tag">
+                            <div class="g-contenedor-tag-seleccionado">
+                                <div style="float:left">belleza</div>
+                                <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="producto-volver-5"><a>volver</a></button>
+                    <button><a>archivar</a></button>
+                    <button><a>previsualizar</a></button>
+                    <button><a href="/galeria">publicar</a></button>
+                </div>
+                <!-- generar galeria -->
+                <!-- generar contenido Perfil -->
+                <div id="g-perfil-a" class="loginpopup">
+                    <!-- paso 1 -->
+                    <div id="paso-uno-perfil">
+                        <div style="width:100%;float:left;margin-bottom: 30px;">
+                            <div style="width:100%; float:left; border:1px solid gray;height: auto; float: left;">
+                                <h2>Buscar socia</h2>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="control-label" style="width:100%; text-align:left">Ingresar nombre de socia</label>
+                            <!-- <input required name="address" id="InputAddress" placeholder="Nombre" class="form-control" type="text"> -->
+                            <div class="g-contenedor-tag">
+                                <div class="g-contenedor-tag-seleccionado">
+                                    <div style="float:left">belleza</div>
+                                    <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="producto-volver-6"><a>volver</a></button>
+                        <button id="proximo-paso-perfil"><a>siguiente</a></button>
+                    </div>
+                    <!-- paso 1 -->
+                    <!-- paso 2 -->
+                    <div id="paso-dos-perfil" style="display:none;">
+                        <div style="width:100%;float:left;margin-bottom: 30px;">
+                            <div style="width:100%; float:left; border:1px solid gray;height: auto; float: left;">
+                                <h2>Ingresar datos de socia</h2>
+                            </div>
+                        </div>
+                        <div style="width:100%;float:left;margin-bottom: 30px;">
+                            <div style="width:45%; float:left; height: auto; float: left; margin-right:5%;">
+                                <label class="control-label">foto perfil</label>
+                                <img src="{{ site_base }}/static/img/0013.png" style="width:100%; margin-bottom:17px;">
+                                <div class="form-group required">
+                                    <label class="control-label">Seleccionar un archivo</label>
+                                    <input required name="address" id="InputAddress" placeholder="Imagen" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div style="width:45%; float:left; height: auto; float: left; margin-left:5%;">
+                                <label class="control-label">foto logotipo</label>
+                                <img src="{{ site_base }}/static/img/0013.png" style="width:100%; margin-bottom:17px;">
+                                <div class="form-group required">
+                                    <label class="control-label">Seleccionar un archivo</label>
+                                    <input required name="address" id="InputAddress" placeholder="Imagen" class="form-control" type="text">
+                                </div>
+                            </div>
+                            <div style="width:100%; float:left; height: auto; float: left;">
+                                <div class="form-group required">
+                                    <!-- <label class="control-label">Nombre</label> -->
+                                    <input required name="address" id="InputAddress" placeholder="Nombre" class="form-control" type="text">
+                                </div>
+                                <div class="form-group required">
+                                    <!-- <label class="control-label">Apellido</label> -->
+                                    <input required name="address" id="InputAddress" placeholder="Apellido" class="form-control" type="text">
+                                </div>
+                                <div class="form-group required">
+                                    <!-- <label class="control-label">Productos</label> -->
+                                    <input required name="address" id="InputAddress" placeholder="Productos" class="form-control" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label class="control-label">Descripci&oacute;n</label> -->
+                                    <div class="controls">
+                                        <textarea name="comments" placeholder="ingresa una descripci&oacute;n para tus producto" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <!-- <label class="control-label">Correo contacto</label> -->
+                                    <input required name="address" id="InputAddress" placeholder="Mail" class="form-control" type="text">
+                                </div>
+                                <div class="form-group required">
+                                    <!-- <label class="control-label">Telefono</label> -->
+                                    <input required name="address" id="InputAddress" placeholder="Telefono" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="control-label" style="width:100%; text-align:left">Seleccionar tag</label>
+                            <div class="g-contenedor-tag">
+                                <div class="g-contenedor-tag-seleccionado">
+                                    <div style="float:left">Socia ficticia productos</div>
+                                    <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="control-label">Crea tu url</label>
+                            <input required name="address" id="InputAddress" placeholder="http://me.cl/tu-direccion" class="form-control" type="text">
+                        </div>
+                        <button id="producto-volver-7"><a>volver</a></button>
+                        <button id=""><a>archivar</a></button>
+                        <button id=""><a>previsualizar</a></button>
+                        <button><a href="/perfil">publicar</a></button>
+                    </div>
+                    <!-- paso 2 -->
+                </div>
+                <!-- generar perfil -->
+            </div>
+        </div>
+        <!-- generar contenido y formularios -->
+        <div id="cuerpo" style="width: 100%">
+            <!-- editor menu -->
+            <button class="button-nav-toggle" style="width:40px;height:40px;"></button>
+            <div class="menu">
+                <nav class="nav-main">
+                    <div class="nav-container">
+                        <ul>
+                            <li class="menu-ti">EDITOR ESTILO</li>
+                            <li class="menu-st">Header</li>
+                            <li class="menu-te">
+                                <a href="#">menu</a>
+                                <ul>
+                                    <li class="menu-ti"><a href="#" class="back"><strong>Tipos de menu</strong></a></li>
+                                    <li class="menu-te"><a href="#">Menu 1</a></li>
+                                    <li class="menu-te"><a href="#">menu 2</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-te">
+                                <a href="#">Logo</a>
+                                <ul>
+                                    <li class="menu-ti"> <a href="#" class="back"><strong>Logo</strong></a></li>
+                                    <button class="btn-menu">Subir imagen</button>
+                                    <!-- <input class="" type="file" name="imagen" id="imagen" /> -->
+                                </ul>
+                            </li>
+                            <li class="menu-st">Contenedor</li>
+                            <li class="menu-te">
+                                <a href="#">color fondo</a>
+                                <ul>
+                                    <li class="menu-ti"> <a href="#" class="back"><strong>color fondo</strong></a></li>
+                                    <li>
+                                        <div id="picker"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-te">
+                                <a href="#">productos</a>
+                                <ul>
+                                    <li class="menu-ti"> <a href="#" class="back"><strong>Productos</strong></a></li>
+                                    <li class="menu-te" style="float: left;width: 100%;height: 70px;">
+                                        <div class="" style="float:left;margin-top: 14px;width: 20px;height: auto;">X</div>
+                                        <div class="" style="float:left;float: left;width: 30px;height: auto;margin-top: 14px;">fila</div>
+                                        <!-- slider -->
+                                        <div class="photo-slider wallop-slider wallop-slider--slide" style="float: right;width: 120px;height: auto;margin-right: 18px;">
+                                            <div style="width:100%; height:auto; overflow:hidden; position:relative;">
+                                                <ul class="wallop-slider__list" style="right:0; position: inherit; padding: 0px;width: 100%;">
+                                                    <li class="wallop-slider__item wallop-slider__item--current"><img src="{{ site_base }}/static/menu/images/row1.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row2.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row3.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row4.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row5.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row6.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row7.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row8.png"></li>
+                                                    <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row9.png"></li>
+                                                </ul>
+                                            </div>
+                                            <button class="wallop-slider__btn wallop-slider__btn--previous btn btn--previous wallop-btn-base" disabled style="top: 13px;left: -29px;">
+                                            </button>
+                                            <button class="wallop-slider__btn wallop-slider__btn--next btn btn--next wallop-btn-base" style="top: 13px;right: -29px;">></button>
+                                        </div>
+                                        <!-- slider -->
+                                    </li>
+                                    <button class="btn-menu btn-menu-top">+ agregar row</button>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul style="top:0px;">
+                            <li class="menu-st">Diseños anteriores</li>
+                            <li class="menu-te">
+                                <a href="#">todos los diseños</a>
+                                <ul>
+                                    <li class=""> <a href="#" class="back"><strong>DISEÑOS ANTERIORES</strong></a></li>
+                                    <li><a href="#">Diseño 1</a></li>
+                                    <li><a href="#">Diseño 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="campo_guardar" style="bottom: 0;position: absolute;display:none;">
+                        <input class="campo_guandar_input" type="text" placeholder="NOMBRE DISEÑO">
+                        <button class="btn-menu">Guardar</button>
+                    </div>
+                    <div class="campo_guardar" style="bottom: 0;position: absolute;">
+                        <button class="btn-menu">actualizar</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- editor menu -->
+        <!-- header -->
+        <!-- header fixed inicio-->
+        <div id="main-nav-fixed-navigation" class="fixed-menu-me">
+            <a href="/" class="nav-brand" style="border:0px;text-align: left; ">
+                <img style="width: 60%;" src="{{ site_base }}/static/img/logome2.jpg">
+            </a>
+            <div class="busqueda-movil-material hide-show">
+                <i class="icon-search"></i>
+            </div>
+            <input type="text" name="fname" placeholder="BUSCAR" class="show-hide">
+        </div>
+        <!-- header fixed fin-->
+        <!-- header normal inicio -->
+        <div class="header-me-princ">
+            <div id="main-nav" class="" style="position:absolute;width: 100%;">
+                <div class="container-fluid" style="max-width: 100%;padding: 0px;">
+                    <div class="nav-header">
+                        <a href="/" class="nav-brand" style="border:0px;">
+                            <img src="{{ site_base }}/static/img/logome.png">
+                        </a>
+                        <input type="text" name="fname" class="buscar-header-norm" placeholder="BUSCAR">
+                    </div>
+                </div>
+            </div>
+            <!-- menu principal -->
+            <ul class="nav-list text-center effect menu-2" style="left:0;">
+                <li style="background-color:rgba(64, 153, 172, 0.7)">
+                    <a href="/">Conocenos</a>
+                </li>
+                <li style="background-color:rgba(66, 76, 141, 0.7);">
+                    <a href="/">Asociate</a>
+                </li>
+                <li style="background-color:rgba(123, 87, 190, 0.7);">
+                    <a href="/">Crece</a>
+                </li>
+                <li style="background-color:rgba(234, 81, 81, 0.7)">
+                    <a href="/">Market ME</a>
+                </li>
+            </ul>
+            <!-- menu principal -->
+            <!-- imagen header fixed -->
+            <img src="{{ site_base }}/static/img/header.jpg" class="show-hide" style="width:100%;">
+            <img src="{{ site_base }}/static/img/header-movil.jpg" class="hide-show" style="width:100%;">
+            <!-- imagen header fixed -->
+        </div>
+        <!-- header normal fin-->
+        <div class="frase-insp" style="width:100%; color:gray; text-align:center; padding: 20px 0px;">
+            <h1>Esta es una frase inspiradora</h1>
+        </div>
+        <!-- boton para navegar -->
+        <span class="btn-agregar-cont-principal ">
+            <i class="icon-plus"></i>
+        </span>
+        <!-- botón agregar -->
+        <span class="btn-categories cover-material">
+            <i class="icon-list"></i>
+        </span>
+        <div id="menu-material-4" class="ul-filtro">
+            <nav class="nav-main-2">
+                <div class="nav-container-2">
+                    <ul>
+                        <li class="" style="background-color:rgba(234, 81, 81, 1);">
+                            <a href="#" style=" color:white;">Market ME</a>
+                            <ul>
+                                <li class="" style="background-color:rgba(234, 81, 81, 1);">
+                                    <p class="back">volver</p>
+                                </li>
+                                <li class=""><a href="#">Belleza</a></li>
+                                <li class=""><a href="#">Zapatos</a></li>
+                                <li class=""><a href="#">Ropa</a></li>
+                                <li class=""><a href="#">Cuerpo & piel</a></li>
+                                <li class=""><a href="#">Servicios</a></li>
+                            </ul>
+                        </li>
+                        <li class="" style="background-color:rgb(123, 87, 190);">
+                            <a href="#" style=" color:white;">Crece</a>
+                            <ul>
+                                <li class="" style="background-color:rgb(123, 87, 190);">
+                                    <p href="#" class="back">Volver</p>
+                                </li>
+                                <li class=""><a href="/mcapital">MCapital</a></li>
+                                <li class=""><a href="/link">Link</a></li>
+                                <li class=""><a href="/asesorias">Asesorias</a></li>
+                                <li class=""><a href="/certificaciones">Certificaciones</a></li>
+                                <li class=""><a href="/financiamiento">Alianzas Estratégicas</a></li>
+                                <li class=""><a href="/haztesocia">Hazte socia</a></li>
+                            </ul>
+                        </li>
+                        <li class="" style="background-color:rgb(66, 76, 141);">
+                            <a href="#" style=" color:white;">Asociate</a>
+                            <ul>
+                                <li class="" style="background-color:rgb(66, 76, 141);">
+                                    <p href="#" class="back">Volver</p>
+                                </li>
+                                <li class=""><a href="/haztesocia">Hazte socia</a></li>
+                                <li class=""><a href="/galeriasocias">Galeria socias</a></li>
+                                <li class=""><a href="/asesorias">Asesorias</a></li>
+                                <li class=""><a href="/madrinas">Madrinas</a></li>
+                                <li class=""><a href="/beneficios">Beneficio</a></li>
+                                <li class=""><a href="/actividades">Actividades</a></li>
+                            </ul>
+                        </li>
+                        <li class="" style="background-color:rgb(64, 153, 172);">
+                            <a href="#" style=" color:white;">Conocenos</a>
+                            <ul>
+                                <li class="" style="background-color:rgb(64, 153, 172);">
+                                    <p href="#" class="back">Volver</p>
+                                </li>
+                                <li class=""><a href="/aboutus">Quienes Somos</a></li>
+                                <li class=""><a href="/financiamiento">Alianzas Estratégicas</a></li>
+                                <li class=""><a href="/contact">Contáctanos</a></li>
+                                <li class=""><a href="/actividades">Actividades</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- header -->
+        <div id="wrap">
+            <!-- registration -->
+            <div class="container-fluid productlist">
+                <!-- raw 1 -->
+                <div class="row">
+                    <div class="col-sm-8 sobre-botones caja-xl">
+                        <a href="/event">
+                            <div class="cont-boxes">
+                                <div class="box-art">
+                                    <!-- <label>Articulo :</label>
+                                    <p>23 noviembre</p> -->
+                                    <h2>Este el titulo del articulo</h2>
+                                </div>
+                                <img src="{{ site_base }}/static/img/0051.jpg" class="img-responsive" alt="item">
+                            </div>
+                        </a>
+                        <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                            <i class="icon-pencil"></i>
+                        </span>
+                    </div>
+                    <div class="col-sm-4 ">
+                        <div class="col-sm-12 sobre-botones caja-m">
+                            <a href="/event">
+                                <div class="cont-boxes">
+                                    <div class="box-art">
+                                        <!-- <label>Articulo :</label>
+                                        <p>23 noviembre</p> -->
+                                        <h2>Este el titulo del articulo</h2>
+                                    </div>
+                                    <img src="{{ site_base }}/static/img/0051.jpg" class="img-responsive" alt="item">
+                                </div>
+                            </a>
+                            <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                                <i class="icon-pencil"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12 sobre-botones caja-m">
+                            <a href="/event">
+                                <div class="cont-boxes">
+                                    <div class="box-event">
+                                        <!-- <label>Evento :</label> -->
+                                        <!-- <i class="fa icon-glass"></i> -->
+                                        <div class="box-event-date">
+                                            <h2>
+                                            <span>23</span>
+                                            <p>NOV</p>
+                                            </h2>
+                                        </div>
+                                        <h2 class="box-event-h2">Nombre evento</h2>
+                                    </div>
+                                    <img src="{{ site_base }}/static/img/0053.jpg" class="img-responsive" alt="item">
+                                </div>
+                            </a>
+                            <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                                <i class="icon-pencil"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- raw 1 -->
+                <!-- button -->
+                <!-- button -->
+                <!-- row 4 -->
+                <div class="row">
+                    <div class="col-sm-4 sobre-botones caja-m">
+                        <a href="/product/Botin/Queltehue C19/café moro">
+                            <div class="cont-boxes">
+                                <div class="box-product">
+                                    <h2>Nombre del producto</h2>
+                                    <p>Nombre tienda</p>
+                                </div>
+                                <img src="{{ site_base }}/static/img/004.jpg" class="img-responsive" alt="item">
+                            </div>
+                            <span class="productlist-price-container">
+                                <span class="product-price">
+                                    <span class="price">$ 9.990</span>
+                                </span>
+                            </span>
+                        </a>
+                        <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                            <i class="icon-pencil"></i>
+                        </span>
+                    </div>
+                    <div class="col-sm-4 sobre-botones caja-m">
+                        <a href="/event">
+                            <div class="cont-boxes">
+                                <div class="box-banner">
+                                    <!-- <label>Banner</label> -->
+                                    <h2>Visita nuestra pagina</h2>
+                                    <!-- <p>Haz click en este banner...</p> -->
+                                </div>
+                                <img src="{{ site_base }}/static/img/0051.jpg" class="img-responsive" alt="item">
+                            </div>
+                        </a>
+                        <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                            <i class="icon-pencil"></i>
+                        </span>
+                    </div>
+                    <div class="col-sm-4 sobre-botones caja-m">
+                        <a href="/eperfil">
+                            <div class="cont-boxes">
+                                <div class="box-profile">
+                                    <!-- <label>Articulo :</label>-->
+                                    <h2>Nombre Socia</h2>
+                                    <p>nombre empresa</p>
+                                </div>
+                                <img src="{{ site_base }}/static/img/0026.png" class="img-responsive" alt="item">
+                            </div>
+                        </a>
+                        <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                            <i class="icon-pencil"></i>
+                        </span>
+                    </div>
+                    <!-- row 4 -->
+                    <!-- row 4 -->
+                    <div class="row">
+                        <div class="col-sm-4 sobre-botones caja-m">
+                            <a href="/eperfil">
+                                <div class="cont-boxes">
+                                    <div class="box-galery">
+                                        <h2>Nombre galería</h2>
+                                    </div>
+                                    <img src="{{ site_base }}/static/img/0052.jpg" class="img-responsive" alt="item">
+                                </div>
+                            </a>
+                            <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                                <i class="icon-pencil"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-4 sobre-botones">
+                            <a href="/product/Botin/Queltehue C19/café moro">
+                                <img src="{{ site_base }}/static/img/008.jpg" class="img-responsive" alt="item">
+                                <span class="productlist-price-container">
+                                    <span class="product-price">
+                                        <span class="price">$ 9.990</span>
+                                    </span>
+                                </span>
+                            </a>
+                            <span class="btn-archivar">
+                                <i class="icon-folder-open"></i>
+                            </span>
+                            <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                                <i class="icon-pencil"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-4 sobre-botones">
+                            <a href="/product/Botin/Queltehue C19/café moro">
+                                <img src="{{ site_base }}/static/img/009.jpg" class="img-responsive" alt="item">
+                                <span class="productlist-price-container">
+                                    <span class="product-price">
+                                        <span class="price">$ 9.990</span>
+                                    </span>
+                                </span>
+                            </a>
+                            <span class="btn-archivar">
+                                <i class="icon-folder-open"></i>
+                            </span>
+                            <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                                <i class="icon-pencil"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- row 4 -->
+                    <!-- raw 2 -->
+                    <div class="row">
+                        <div class="col-sm-4 ">
+                            <div class="col-sm-12 sobre-botones">
+                                <a href="/article">
+                                    <img src="{{ site_base }}/static/img/010.jpg" class="img-responsive" alt="item">
+                                </a>
+                                <span class="btn-archivar">
+                                    <i class="icon-folder-open"></i>
+                                </span>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                                    <i class="icon-pencil"></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-12 sobre-botones">
+                                <a href="/beneficios">
+                                    <img src="{{ site_base }}/static/img/011.jpg" class="img-responsive" alt="item">
+                                </a>
+                                <span class="btn-archivar">
+                                    <i class="icon-folder-open"></i>
+                                </span>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                                    <i class="icon-pencil"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 sobre-botones">
+                            <a href="/aboutus">
+                                <img src="{{ site_base }}/static/img/012.jpg" class="img-responsive" alt="item">
+                            </a>
+                            <span class="btn-archivar">
+                                <i class="icon-folder-open"></i>
+                            </span>
+                            <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                                <i class="icon-pencil"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- raw 2 -->
+                    <!-- row 5 -->
+                    <!-- row 5 -->
+                    <!-- row 6 -->
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="col-sm-6 sobre-botones caja-s">
+                                <a href="/event">
+                                    <div class="cont-boxes">
+                                        <div class="box-art">
+                                            <label>Articulo :</label>
+                                            <p>23 noviembre</p>
+                                            <h2>Este el titulo del articulo</h2>
+                                        </div>
+                                        <img src="{{ site_base }}/static/img/0051.jpg" class="img-responsive" alt="item">
+                                        <!-- <span class="productlist-price-container">
+                                            <span class="product-price">
+                                                <span class="price">67900</span>
+                                            </span>
+                                        </span> -->
+                                    </div>
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal ">
+                                    <i class="icon-pencil"></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row 6 -->
+                    <!-- row 7 -->
+                    <div class="row">
+                        <div class="col-bt-1 especial">
+                            <div class="col-bt-5 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-bt-5 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-bt-2 especial">
+                            <div class="col-bt-5 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-bt-2 especial">
+                            <div class="col-bt-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-bt-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-bt-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-bt-6 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row 7 -->
+                    <!-- row 8 -->
+                    <div class="row">
+                        <div class="col-bt-2">
+                            <div class="col-bt-6 altura-1 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-bt-6 altura-1 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-bt-6 altura-1 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-bt-6 altura-1 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-bt-2">
+                            <div class="col-bt-5 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-bt-1">
+                            <div class="col-bt-5 altura-1 sobre-botones">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                            <div class="col-bt-5 altura-1 sobre-botones ">
+                                <a href="">
+                                    <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                    <!-- <span class="productlist-price-container">
+                                        <span class="product-price">
+                                            <span class="price">$ 9.990</span>
+                                        </span>
+                                    </span> -->
+                                </a>
+                                <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                    <i class="icon-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row 8 -->
+                    <!-- raw 3 -->
+                    <div class="row">
+                        <div class="col-sm-6 sobre-botones ">
+                            <a href="">
+                                <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                <!-- <span class="productlist-price-container">
+                                    <span class="product-price">
+                                        <span class="price"></span>
+                                    </span>
+                                </span> -->
+                            </a>
+                            <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                <i class="icon-plus"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-6 sobre-botones ">
+                            <a href="">
+                                <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+                                <!-- <span class="productlist-price-container">
+                                    <span class="product-price">
+                                        <span class="price"></span>
+                                    </span>
+                                </span> -->
+                            </a>
+                            <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+                                <i class="icon-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- raw 3 -->
+                </div>
+                <div class="carritoproductos clearfix">
+                    <div class="flecha clearfix">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <script src="{{ site_base }}/static/js/rimages.js"></script> -->
+        <!--<script src="{{ site_base }}/static/js/fix_ie9.js"></script>-->
+        <script type="text/javascript" src="{{ site_base }}/static/js/jquery-min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+        <script src="{{ site_base }}/static/js/giani_functions.js"></script>
+        <script src="{{ site_base }}/static/js/giani.js"></script>
+        <!-- bt inicio -->
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/jsbt/placeholders.min.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/jsbt/custom.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/jsbt/ga.js"></script>
+        <!-- bt fin -->
+        <!-- menu editor js -->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="{{ site_base }}/static/menu/js/modernizr.js"></script>
+        <script src="{{ site_base }}/static/menu/js/main.js"></script>
+        <script src="{{ site_base }}/static/menu/js/WallopSlider.js"></script>
+        <script src="{{ site_base }}/static/menu/js/script.js"></script>
+        <script src="{{ site_base }}/static/menu/js/colpick.js"></script>
+        <!-- menu editor js -->
+        <script src="{{ site_base }}/static/js/menu-material-2.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/static/js/ligthbox-d.js"></script>
+        <script type="text/javascript">
+        $('#picker').colpick({
+            flat: true,
+            layout: 'hex',
+            submit: 0
+        });
+        </script>
+        <script>
+        window.fbAsyncInit = function() 
+        {
+            FB.init(
+            {
+                appId: '348231912006000',
+                xfbml: true,
+                version: 'v2.1'
+            });
+        };
+        (function(d, s, id) 
+        {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        var is_running_animation = false;
+
+        $(window).scroll(function() 
+        {
+            var scroll = $(window).scrollTop();
+            if (!is_running_animation) 
+            {
+                is_running_animation = true;
+                if (scroll >= 60) 
+                {
+                    $("#main-nav-fixed-navigation").animate(
+                        {
+                            marginTop: 0
+                        }, "fast",
+                        function() 
+                        {
+                            is_running_animation = false;
+                        });
+                } 
+                else 
+                {
+                    $("#main-nav-fixed-navigation").animate(
+                        {
+                            marginTop: -150
+                        },
+                        "fast",
+                        function() 
+                        {
+                            is_running_animation = false;
+                        });
+                }
+            }
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<div class="row">
+
+    <div class="col-bt-2 especial">
+        {% for i in range(0, 4) %}
+        {% if len(content) > i %}
+        <div class="col-bt-6 sobre-botones especial">
+            {{ contentType('xs', content[i], box_counter, site_base) }}
+        </div>
+        {% end %}
+        {% end %}
+    </div>
+    <div class="col-bt-2 especial">
+        <div class="col-bt-5 sobre-botones especial">
+            {% if  len(content) >= 5 %}
+                {{ contentType('m', content[2], box_counter, site_base) }}
+            {% end  %}
+        </div>
+    </div>
+    <div class="col-bt-1 especial">
+        {% for i in range(6, 8) %}
+        {% if len(content) > i %}
+        <div class="col-bt-5 sobre-botones especial">
+            {{ contentType('xs', content[i], box_counter, site_base) }}
+        </div>
+        {% end %}
+        {% end %}
+    </div>
+</div>

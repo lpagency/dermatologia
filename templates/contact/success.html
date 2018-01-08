@@ -1,0 +1,94 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{% end %}
+
+{% block header %}
+{% include '../home/header_inside.html' %}
+{% end %}
+
+{% block scripts %}
+{% end %}
+
+{% block css %}
+<link type="text/css" rel='stylesheet' href="{{ site_base }}/static/css/page.edit.css" />
+<style type="text/css">
+    .controls input, .controls textarea
+    {
+        padding: 10px 16px;
+    }
+
+    .col-sm-6, .col-sm-12
+    {
+        padding: 2px;
+    }
+</style>
+{% end %}
+
+
+
+{% block body %}
+    <div id="wrap">
+        <section>
+    <div class="mobile suu" style="background:url('{{ read_image(site.name + '_sup',500) }}'); height:350px; background-size:cover; margin-top: -195px;  filter: grayscale(0%) brightness(65%); -webkit-filter: grayscale(0%) brightness(65%); -moz-filter: grayscale(0%) brightness(65%); -ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%); background-position:center;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_sup">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_sup" name="image" id="img_sup" >
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_sup" src="{{ read_image(site.name + '_sup', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_sup',500) }}'" class="banner_su hidden" alt="item">
+    </div>
+
+    <div class="container">
+        <div class="col-md-12">
+            <div class="text-center titulo-suc {{editabletext}}" text-id="{{ site.name + '_suu' }}"> {{ read_text(site.name +  '_suu') }}</div>
+            <div class="text-center titulo-peq {{editabletext}}" text-id="{{ site.name + '_suu_2' }}"> {{ read_text(site.name +  '_suu_2') }}</div>
+        </div>
+    </div>
+ 
+</section>
+        <!-- registration -->
+        <div class="container-fluid productlist">
+            <div class="row pages-caption" >
+                <div class="container-fluid-art">
+                    <div class="clearfix"> </div>
+            <!--     <h1>
+                {% if is_admin %}
+                <span class="editabletext" text-id="me-contact-success-title" >{{ read_text('me-contact-success-title') }}</span>
+                {% else %}
+                <span>{{ read_text('me-contact-success-title') }}</span>
+                {% end %}
+                </h1> -->
+                </div>
+            </div>
+
+     <!--        <div class="row pages-caption" >
+                <div class="container-fluid-art">
+                <p>
+                {% if is_admin %}
+                <span class="editabletext" text-id="me-contact-success-p" >{{ read_text('me-contact-success-p') }}</span>
+                {% else %}
+                <span>{{ read_text('me-contact-success-p') }}</span>
+                {% end %}
+                </p>
+                </div>
+            </div> -->
+
+            <!-- raw 1 -->
+            <div class="row content-body">
+            </div>
+            <div class="carritoproductos clearfix">
+                <div class="flecha clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% include '../home/footer.html' %}
+{% end %}
+

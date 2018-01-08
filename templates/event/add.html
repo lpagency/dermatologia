@@ -1,0 +1,76 @@
+<!-- generar evento -->
+<!--link rel="stylesheet" href="{{ site_base }}/static/bower_components/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" /-->
+<div id="g-evento-a" class="loginpopup step_two">
+    <form action="{{ site.url }}event/add" method="post" acceptcharset="UTF-8" enctype="multipart/form-data" class="event-add-form" >
+        <div class="g-header-form">
+            <div class="g-header-button g-header-button-active">
+                <h2>NUEVO EVENTO</h2>
+            </div>
+            <div class=" g-header-button">
+                <h2>BORRADORES</h2>
+            </div>
+        </div>
+        <input type="hidden" name="content_id" value="{% if data is not None %}{{data.id}}{% end %}">
+        <div class="form-group required">
+            <label class="control-label">Nombre evento</label>
+            <input required name="name" id="InputAddress" placeholder="Ingresa o edita la información del evento" class="form-control" type="text" maxlength="50" value="{% if data is not None %}{{data.title}}{% end %}">
+            <div for="name" class="error g-alert" >Nombre no puede estar vacío</div>
+        </div>
+        <div class="form-group required">
+            <label class="control-label">Lugar</label>
+            <input required name="place" id="" placeholder="Deja el nombre del recinto" class="form-control" type="text"
+            value="{% if data is not None %}{{data.place}}{% end %}">
+            <!-- <div for="name" class="error g-alert" >Nombre no puede estar vacío</div> -->
+        </div>
+        <div class="form-group required" >
+            <label class="control-label" >Fecha</label>
+            <div class='input-group date' id='datetimepicker'>
+                <input name="begin" class="form-control date" placeholder="dd/mm/yyyy hh:mm" value="{% if data is not None %}{% if data.begin is not None %}{{data.begin}}{% end %}{% end %}"/>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+            <div for="begin" class="error g-alert" >Fecha no puede estar vacía</div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group required">
+            <label class="control-label" style="width:100%;text-align:left;">Texto</label>
+            <textarea class="textboxio" name="description">
+                {% if data is not None %}
+                {{data.description}}
+                {% end %}
+            </textarea>
+        </div>
+        <div class="form-group required">
+            <label class="control-label">Agrega la foto</label>
+            <div id="image-selector-ui">
+                <input type="file" name="image" class="content-add-form-input" multiple>
+                <div class="content-add-form-prev-data hidden" >
+                    {% if data is not None %}{{ data.getJSONImageList() }}{% end %}
+                </div>
+            </div>
+        </div>
+        <div class="form-group required">
+            <label class="control-label">Sumar formulario</label>
+            <input name="form_url" id="InputAddress" placeholder="Pegar url de formulario correspondiente..." class="form-control" type="text" value="{% if data is not None %}{{data.form_url or ''}}{% end %}">
+            <div for="form_url" class="error g-alert" >URL formulario inv&aacute;lido</div>
+        </div>
+
+        {% if data is not None %}
+            {% set tags = data.tag_list %}
+        {% else %}
+            {% set tags = None %}
+        {% end %}
+        {% module Template('common/add_tag.html', tags=tags) %}
+
+        <button id="producto-volver-4"><a>volver</a></button>
+        <button><a>archivar</a></button>
+        <button><a>previsualizar</a></button>
+        <button type="submit" class="submit_event_form" ><a>publicar</a></button>
+    </form>
+</div>
+<!--script>
+    moment().format();
+    moment().format("DD/MM/YYYY, h:mm:ss a");
+</script-->
+<!-- generar evento-->

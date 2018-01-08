@@ -1,0 +1,187 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+ {% include '../home/header_inside.html' %}
+{% end %}
+
+
+{% block javascript %}
+<script type="text/javascript" src="{{ site_base }}/static/js/dermatologia.js"></script>
+<script type="text/javascript">
+  $(window).scroll(function(){
+
+  // Add parallax scrolling to all images in .paralax-image container
+
+  // $('.parallax-image-2').each(function(){
+
+  //   // only put top value if the window scroll has gone beyond the top of the image
+  //   if ($(this).offset().top < $(window).scrollTop()) {
+  //     // Get ammount of pixels the image is above the top of the window
+  //     var difference = $(window).scrollTop() - $(this).offset().top;
+  //     // Top value of image is set to half the amount scrolled
+  //     // (this gives the illusion of the image scrolling slower than the rest of the page)
+  //     var half = (difference / 2) + 'px';
+
+ 
+  //     $(this).find('img').css('top', half);
+
+  //   } else {
+
+  //     // if image is below the top of the window set top to 0
+
+  //     $(this).find('img').css('top', '0');
+
+  //   }
+
+  // });
+
+
+});
+
+$(document).ready(function(){
+  // var page=0;
+  // $(window).scroll(function() {
+  //  if($(window).scrollTop() + $(window).height() == $(document).height()) {
+  //       page += 1;
+  //       $.post(site_base + "/article/list", { 
+  //                   "tag" : "dermatologia", 
+  //                   "limit" : 2,
+  //                   "page" : page
+  //               }, function(result)
+  //               {
+  //                 $(".article_list").append(result)
+  //               });
+  //  }
+  // });
+
+
+  // infinit_scroll(tag="dermatologia", limit="2");
+});
+
+</script>
+
+{% end %}
+
+
+{% block body %}
+{% if is_admin %}
+    {% set editabletext = 'editabletext' %}
+{% else %}
+    {% set editabletext = '' %}
+{% end %}
+
+
+
+<section>
+      <div class="mobile fullscreen background parallax derma-banner" style="background:url('{{ read_image(site.name + '_banner_cate_li',500) }}'); background-attachment:fixed; height:570px; background-size:cover;   filter: grayscale(0%) brightness(65%);-webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);-ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%); background-position:center;" data-img-width="1600" data-img-height="860" data-diff="100">
+        {% if is_admin %}
+               <div class="image-upload part1 lapiz visible-movil">
+                   <label for="img_banner_cate_li">
+                       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                   </label>
+                   <input type="file" class="editableimage" image-id="{{ site.name }}_banner_cate_li" name="image" id="img_banner_cate_li" >
+               </div>
+        {% end %}
+                <img id="{{ site.name }}_banner_cate_li" src="{{ read_image(site.name + '_banner_cate_li', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_cate_li',500) }}'" class="banner_uno_list hidden" alt="item">        
+       </div>
+       
+       <div class="col-md-12">
+                    <h1 class="text-center titulo {{editabletext}}" text-id="{{ site.name + '_til_li' }}"> {{ read_text(site.name +  '_til_li') }}</h1>
+        </div>
+    
+</section>
+
+
+<section>
+    <!-- <div class="row"> -->
+        <div class="col-md-12">
+            <div class="bajada text-center {{editabletext}}" text-id="{{ site.name + '_baj_li' }}"> {{ read_text(site.name +  '_baj_li') }} </div>
+        </div>
+   <!--  </div> -->
+
+</section>
+
+
+<section>
+    <!-- *articulos* -->
+
+     <div class="container">
+      <!--   <div class="row"> -->
+          {{ getArticleList(limit=1, html="page/article_home.html", tag='dermatologia,posicion 1') }}
+          {{ getArticleList(limit=1, html="page/article_home.html", tag='dermatologia,posicion 2') }}
+          {{ getArticleList(limit=1, html="page/article_home.html", tag='dermatologia,posicion 3') }}
+          {{ getArticleList(limit=1, html="page/article_home.html", tag='dermatologia,posicion 4') }}
+        <!-- </div> -->
+    </div>
+  
+</section>
+
+
+<!-- 
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-12">
+                <img class="img-responsive img-1" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf">contenido</p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <img class="img-responsive img-2" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf">contenido</p>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <img class="img-responsive img-3" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf2">contenido</p>
+            </div>
+             <div class="col-md-3 col-xs-12">
+                <img class="img-responsive img-3" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf2">contenido</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section>
+  <!--   <div class="row"> -->
+        <div class="col-md-12">
+            <div class="bajada-2 text-center {{editabletext}}" text-id="{{ site.name + '_baj_li_2' }}"> {{ read_text(site.name +  '_baj_li_2') }} </div>
+        </div>
+<!--     </div> -->
+
+</section>
+
+
+<section id="contenedor">
+    <div class="container">
+        <div class="row spa article_list">
+           {{ getArticleList(tag='dermatologia,-posicion 1,-posicion 2,-posicion 3,-posicion 4') }}
+        </div>
+    </div>
+
+</section>
+
+
+<!--
+<section>
+    <div class="row">
+       <div align="center">
+            <div class="col-md-12 col-xs-12">
+                <a href="#">
+                <button type="button" class="btn btn-cargar">Cargar más contenido </button>
+                </a>
+            </div>
+       </div>
+</section>
+-->
+
+
+
+{% include '../home/footer.html' %}
+
+{% end %}
+

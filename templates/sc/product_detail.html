@@ -1,0 +1,162 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block body %}
+{% include '../home/header.html' %}
+{% end %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bodegas/dist/bodegas.client.css">
+{% end %}
+
+{% block javascript %}
+
+
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        var base_url = $.environmentVar(
+            'https://apibodegas.loadingplay.com/',
+            'https://apibodegas.loadingplay.com/',
+            'https://apibodegas.loadingplay.com/');
+        var checkout_url = $.environmentVar(
+            'https://pay.loadingplay.com',
+            'https://pay.loadingplay.com',
+            'https://pay.loadingplay.com');
+        var app_public = $.environmentVar(14,14,14);
+
+        $(document).ecommerce('product_detail', {
+            'app_public' : app_public,
+            'base_url' : base_url,
+            'checkout_url': checkout_url,
+            'product_id' : {{ product_id }},
+            onLoad: function(product){
+                related(product.bullet_3);
+            }
+        });
+
+        // productos relacionados
+        var related = function(tag)
+        {
+            var config = {
+                'app_public' : app_public,
+                'base_url' : base_url,
+                'maxProducts' : 8,
+                'templateOrigin' : '#product_template',
+                'tag' : '',
+                'ignore_stock' : true,
+                    'onLoad':function(){
+                         $('.ellipsis').ellipsis();
+                     }
+                
+            };
+            $('.product-related').ecommerce('product_box', config);
+        };
+    });
+
+</script>
+
+
+<script type="text/template" id="product_detail">
+        <div id="content" class="col-sm-12">
+            <div class="row space80">
+                <div class="col-xs-12 col-sm-10 col-md-8 col-md-offset-2 col-sm-offset-1">
+                    <ul class="thumbnails">
+                       <div align="center">
+                           <img src="{{! images[0]['thumb_200'] }}" title="" alt="" class="img-responsive img_prod_detail">
+                       </div>
+                    </ul>
+                </div>
+                <div class="col-md-12 especial">
+                    <div class="col-xs-12 col-sm-10 col-md-8 col-md-offset-2 col-sm-offset-1">
+                        <figcaption class="text-center">
+                             <div align="center">
+                                    <h1 class="name name_prod_detail "><a class="line" href="#">{{! name }}</a></h1>
+                                    <h3 class="descr_prod_detail"> 
+                                    <a class="line" href="{{ site_base }}/sc/product/detail/{{! name|friendly }}/{{! id }}">{{! description }}</a></h3>
+                         
+                            </div>
+                        </figcaption>
+                   
+
+                    <div class="form-group">
+                        
+                        <div class="col-md-10">
+                            <p class="where text-center"> Comprar este producto en </p>
+                            <img class="img-responsive marca" src="https://7static.loadingplay.com/static/images/1cb612f50e46d8790281cece43c45cdd_logo-babytuto.png">
+                           <a href="http://www.babytuto.com/search/products?bt_f=top&q=nutrilon" target="_blank">
+                            <button type="button" class="btn btn-go"> IR <i class="fa fa-play" aria-hidden="true"></i> </button>
+                            </a>
+                       </div>
+                  
+
+                       </div>
+                   </div>
+              </div>
+          </div>
+      </div>
+
+</script>
+
+
+<!-- 
+{% end %} -->
+
+
+
+{% block body %}
+{% include '../page/banner.html' %}
+
+
+<div class="container-fluid">
+    
+    <div class="container  product-page"></div>
+
+    </div>
+
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="space80">
+         <div class="productlist dano">
+                <article>
+                    <header>
+                        <h1 class="h1-art especial" >Contenido Relacionado</h1>
+                    </header>
+                </article>
+
+                <div class="row cont-rel">
+                    {{ getArticleList() }}
+                </div>
+
+         </div>
+    </div>
+ </div>
+
+<div class="space80"></div>
+
+<div class="container-fluid dano">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-relac text-left"><strong class="editabletext">Contenido relacionado</strong></h1>
+        </div>
+    </div>
+    <div class="row product-related">
+    </div>
+</div>
+       
+
+
+<!-- 
+<div align="center">
+    <h1>fdjfidjfidfidjfidifjdi</h1>
+</div> -->
+
+
+{% include '../home/footer.html' %}
+{% end %}

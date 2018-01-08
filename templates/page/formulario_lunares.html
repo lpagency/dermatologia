@@ -1,0 +1,108 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+ {% include '../home/header_inside.html' %}
+{% end %}
+
+
+{% block body %}
+{% if is_admin %}
+    {% set editabletext = 'editabletext' %}
+{% else %}
+    {% set editabletext = '' %}
+{% end %}
+
+
+<section>
+    <div class="mobile fullscreen background parallax derma-banner" style="background:url('{{ read_image(site.name + '_formulario_lunares',500) }}'); background-attachment:fixed; height:570px; background-size:cover;   filter: grayscale(0%) brightness(65%);-webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);-ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%); background-position:center;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        {% if is_admin %}
+        <div class="image-upload part1 lapiz visible-movil">
+            <label for="img_formulario_lunares">
+                <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_formulario_lunares" name="image" id="img_formulario_lunares">
+        </div>
+        {% end %}
+        <img id="{{ site.name }}_formulario_lunares" src="{{ read_image(site.name + '_formulario_lunares', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_formulario_lunares',500) }}'" class="banner_uno_list hidden" alt="item">
+    </div>
+    <div class="col-md-12">
+        <h1 class="text-center titulo {{editabletext}}" text-id="{{ site.name + '_formulario_lunares_2' }}"> {{ read_text(site.name +  '_formulario_lunares_2') }}</h1>
+    </div>
+</section>
+<section>
+    <!--  <div class="row"> -->
+    <div class="col-md-12">
+        <div class="bajada text-center {{editabletext}}" text-id="{{ site.name + '_formulario_lunares' }}"> {{ read_text(site.name + '_formulario_lunares') }} </div>
+    </div>
+    <!--  </div> -->
+</section>
+<section>
+    <!-- *articulos* -->
+    <div class="container">
+        <!--  <div class="row"> -->
+        {{ getArticleList(limit=1, html="page/article_home.html", tag='lunares,posicion 1') }}
+        {{ getArticleList(limit=1, html="page/article_home.html", tag='lunares,posicion 2') }}
+        {{ getArticleList(limit=1, html="page/article_home.html", tag='lunares,posicion 3') }}
+        {{ getArticleList(limit=1, html="page/article_home.html", tag='lunares,posicion 4') }}
+        <!--    </div> -->
+    </div>
+</section>
+<!-- 
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-12">
+                <img class="img-responsive img-1" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf">contenido</p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <img class="img-responsive img-2" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf">contenido</p>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <img class="img-responsive img-3" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf2">contenido</p>
+            </div>
+             <div class="col-md-3 col-xs-12">
+                <img class="img-responsive img-3" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf2">contenido</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section>
+    <!--    <div class="row"> -->
+    <div class="col-md-12">
+        <div class="bajada-2 text-center {{editabletext}}" text-id="{{ site.name + '_formulario_lunares_1' }}"> {{ read_text(site.name + '_formulario_lunares_1') }} </div>
+    </div>
+    <!--  </div> -->
+</section>
+<section id="contenedor">
+    <div class="container">
+        <div class="row">
+            {{ getArticleList(tag='lunares,-posicion 1,-posicion 2,-posicion 3,-posicion 4') }}
+        </div>
+    </div>
+</section>
+<!-- <section>
+    <div class="row">
+       <div align="center">
+            <div class="col-md-12 col-xs-12">
+                <a class="ful" href="#">
+                <button type="button" class="btn btn-cargar">Cargar más contenido </button>
+                </a>
+            </div>
+       </div>
+</section>
+ -->
+
+
+{% include '../home/footer.html' %}
+
+{% end %}
+

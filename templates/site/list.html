@@ -1,0 +1,10 @@
+{% extends "../base.html" %}
+{% block body %}
+<form action="/site/add" method="post">
+    <input type="text" name="name" /> 
+    <input type="submit" value="Crear" />
+</form>
+{% for site in sites %}
+<a href="{{ url_generator(site["name"]) }}" target="_blank" >{{ site["name"] }}</a><br/>
+{% end %}
+{% end %}

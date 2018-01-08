@@ -1,0 +1,151 @@
+{% extends "../base.html" %}
+{% block title %}
+    {{ site.name }}
+{% end %}
+{% block css %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ site_base }}/static/cssbt/style.css?v=5">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/profile.css">
+{% end %}
+{% block header %}
+    {% include '../home/inside_header_profile.html' %}
+{% end %}
+
+{% block scripts %}
+<script type="text/javascript" src="{{ site_base }}/static/js/members/detail.js" ></script>
+<script type="text/javascript" src="{{ site_base }}/static/js/profile_contact.js"></script>
+{% end %}
+{% block body %}
+    <div class="container-fluid-profile cart-list productlist" style="text-align:left;">
+        
+        <div class="row">
+            
+            <div class="widget col-sm-12 especial profile-company">
+                <div class="col-sm-12 especial profile-foto-top">
+                    <div class="profile-company-logo">
+                        <img src="{{ profile['company_img']['thumb_200'] }}" class="centered-image" alt="item">
+                    </div>
+                </div>
+                <div class="col-sm-12 especial profile-name">
+                    <h2>
+                    {{ profile["company_name"][0] }}
+                    </h2>
+                    
+                </div>
+            </div>
+            <div class="col-sm-12 especial">
+                <div class="col-sm-8 profile-data">
+                    <ul>
+                        {% if 'profile_img' not in profile and 'position' in profile %}
+                        <li>
+                            <hr/>
+                            {{ profile['position'][0] }}
+                        </li>
+                        {% end %}
+
+                        {% if 'url' in profile %}<li><a href="{{ profile["url"][0] }}" target="_blank">{{ profile["url"][0] }}</a></li>{% end %}
+                        <li><a>{{ profile["email"][0] }}</a></li>
+                        <!-- <li><a>{{ profile["url"][0] }}</a></li> -->
+                    </ul>
+                </div>
+                
+            </div>
+            
+            {% if 'profile_img' in profile %}
+            <div class="col-sm-12 profile-partner" >
+                <div class="col-sm-12 profile-title">
+                    <hr>
+                    <h2>Socias</h2>
+                </div>
+                <div class="col-sm-12 especial profile-partner-top">
+                    <div class="col-sm-4 profile-partner-image especial">
+                        <img src="{{ profile['profile_img']['thumb_200'] }}" class="centered-image" alt="item">
+                    </div>
+                    <div class="col-sm-8 especial profile-partner-data">
+                        <h2>
+                        {{ profile["name"][0] }}
+                        </h2>
+                        <p>
+                            {% if "position" in profile %}
+                                {{ profile["position"][0] }}
+                            {% end %}
+                        </p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            {% end %}
+            
+            
+            <div class="col-sm-12 profile-company-line">
+                <hr>
+                {% if "description_company" in profile %}
+                <div class="widget col-sm-12 articulo-text" style="text-align:left;">
+                    <h2 style="text-align:left; font-size: 30px; font-weight: 300; text-transform: capitalize;"></h2>
+                    <p class="p-art">
+                    {{ profile["description_company"][0] }}
+                    </p>
+                    
+                    <p style="width:100%; text-align: right;"><a></a></p>
+                    
+                </div>
+                {% end %}
+
+                {% if "description" in profile and profile['description'][0].strip() != "" %}
+                <div class="widget col-sm-12 articulo-text" style="text-align:left;">
+                    <h2 style="text-align:left; font-size: 30px; font-weight: 300; text-transform: capitalize;">Socia</h2>
+                    <p class="p-art">
+                    {{ profile["description"][0] }}
+                    </p>
+                    
+                    <p style="width:100%; text-align: right;"><a></a></p>
+                    
+                </div>
+                {% end %}
+                <div class="widget col-sm-12">
+                    <h3>Contacto</h3>
+                    <!--p>Comunicate con la empresa de esta socia</p-->
+                    <form action="{{ site_base }}/profile/contact/{{ profile_id }}" class="contact-add-form" method="post" novalidate id="newsletter">
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <div class=" controls">
+                                    <input name="name" placeholder="Tu nombre" class="form-control input-lg requiredField" required type="email" >
+                                    <div id="error_contact_name" for="name" class="error g-alert" >Ingrese su nombre</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class=" controls">
+                                    <input name="email" placeholder="Tu correo" class="form-control input-lg requiredField" required type="email" >
+                                    <div id="error_contact_email" for="email" class="error g-alert" >Ingrese su e-mail</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="controls">
+                                    <textarea name="message" required placeholder="Escribe aquí tu mensaje" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+                                    <div id="error_contact_message" for="message" class="error g-alert" >Su mensaje no puede estar vacío</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p><button name="submit" type="submit" class="btn btn-store btn-block btn-contact-submit" disabled>Enviar correo</button></p>
+                        <!-- <input type="hidden" name="submitted" id="submitted3" value="true"> -->
+                    </form>
+                </div>
+                <div class="col-sm-8">
+                    tags | <a>{{ "</a> , <a>".join(profile["tags"]) }}</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="container-fluid productlist">
+            <article>
+                <header>
+                    <h1 style="text-align:left;">Contenido Relacionado</h1>
+                </header>
+            </article>
+            <div class="row cont-rel">
+                {{ content }}
+            </div>
+        </div>
+{% end %}

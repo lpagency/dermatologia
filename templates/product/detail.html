@@ -1,0 +1,97 @@
+{% extends "../base.html" %}
+{% block title %}
+    {{ site.name }}
+{% end %}
+{% block scripts %}
+    <script type="text/javascript" src="{{ site_base }}/static/js/detalle-producto.js"></script>
+    <script type="text/javascript" src="{{ site_base }}/static/js/simple.tab.js" ></script>
+{% end %}
+{% block header %}
+    {% include '../home/header.html' %}
+{% end %}
+{% block body %}
+    <!-- producto bt -->
+    <div class="container-fluid-art hidden-xs">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="/store">Tienda</a></li>
+                <li class="active"><!-- art soap --></li>
+            </ol>
+        </div>
+    </div>
+    <div class="container-fluid-art product productlist">
+        <div class="row visible-xs product-mobile">
+            <div class="col-xs-12 text-center">
+                <h2 class="product-title">{{ product["title"] }}</h2>
+                <div class="product-price">
+                    <span class="price">{{ product["price"] }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8 ">
+                    <div class="col-sm-12">
+                        <img src="{{ product["thumb_500"] }}" class="product-img img-responsive" alt="item">
+                    </div>
+                    <!-- <div class="col-sm-12">
+                        <div class="col-sm-3">
+                            <img src="{{ site_base }}/static/img/0023.png" class="product-img img-responsive" alt="item">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="{{ site_base }}/static/img/0024.png" class="product-img img-responsive" alt="item">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="{{ site_base }}/static/img/0025.png" class="product-img img-responsive" alt="item">
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="{{ site_base }}/static/img/0025.png" class="product-img img-responsive" alt="item">
+                        </div>
+                    </div> -->
+
+            </div>
+            <div class="col-sm-4 " style="padding-left: 20px;">
+                <h2 class="product-title hidden-xs text-left" >{{ product["title"] }}</h2>
+                <div class="product-price hidden-xs text-left" style="width: 100%;">
+                    <span class="price" style="font-size: 30px;font-weight: 500;">{{ product["price"] }}</span>
+                </div>
+                <div class="product-detail text-left">
+                    <p>{{ product["description"] }}</p>
+                </div>
+                <!-- <form  action="product1.html" method="POST" class="myform">
+                    <div class="form-group clearfix">
+                        <label class="control-label">Size</label>
+                        
+                        <select class="form-control _select _select-1" id="size" sku="">
+                            
+                            <option value=""></option>
+                            
+                        </select>
+                        <select class="form-control _select _select-2 margin-top-1" id="quantity">
+                        </select>
+                    </div>
+                    
+                </form>-->
+                <button type="button" class="btn add-to-cart" style="float: left;">COMPRAR</button>
+            </div>
+            <!-- <ul class="product-colors">
+                <li class="selected"><a class="white" style="background-color:#FFF"> </a></li>
+                <li class=""><a style="background-color:#000"> </a></li>
+                <li class=""><a style="background-color:#49A3F1"> </a></li>
+                <li class=""><a style="background-color:#FF6279"> </a></li>
+            </ul> -->
+        </div>
+        
+
+
+    </div>
+    <div class="container-fluid productlist">
+            <article>
+                <header>
+                    <h1 style="text-align:left;">Contenido Relacionado</h1>
+                </header>
+            </article>
+            <div class="row cont-rel">
+                {{ content }}
+            </div>
+        </div>
+    {% end %}

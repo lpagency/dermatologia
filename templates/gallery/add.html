@@ -1,0 +1,51 @@
+<!-- generar contenido galeria -->
+<div id="g-galeria-a" class="loginpopup step_two">
+    <div class="g-header-form">
+        <div class="g-header-button g-header-button-active">
+            <h2>NUEVA GALERÍA</h2>
+        </div>
+        <div class=" g-header-button">
+            <h2>BORRADORES</h2>
+        </div>
+    </div>
+    <form id="gallery-form" class="gallery-add-form" method="post" action="{{ site_base }}/gallery/add" >
+        <input type="hidden" name="content_id" value="{% if data is not None %}{{data.id}}{% end %}">
+        <div class="form-group required">
+            <label class="control-label">Nombre galería</label>
+            <input name="name" class="form-control" placeholder="Nombre" class="form-control" type="text" id="gallery-name-field" value="{% if data is not None %}{{data.title}} {% end %}">
+            <div for="name" id="error_gallery_name" class="error g-alert">Ingrese un nombre</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" style="width:100%;text-align:left;">Descripci&oacute;n de la galeria</label>
+            <div class="controls">
+                <textarea class="textboxio" name="description">
+                    {% if data is not None %}
+                    {{data.description}}
+                    {% end %}
+                </textarea>
+            </div>
+        </div>
+        <div class="form-group required">
+            <label class="control-label">Seleccione Fotografias</label>
+            <div id="gallery-list">
+                <input type="file" name="image" class="gallery-add-form-input" id="gallery-input-image" multiple >
+                <div class="gallery-add-form-prev-data hidden" >
+                    {% if data is not None %}{{ data.getJSONImageList() }}{% end %}
+                </div>
+            </div>
+        </div>
+        <!-- <div class="loademegallery"><img src="{{ site_base }}/static/img/loaderme.gif"></div> -->
+        <div id="error_gallery_images" for="image" class="error g-alert">Debe haber al menos una imagen</div>
+        {% if data is not None %}
+            {% set tags = data.tag_list %}
+        {% else %}
+            {% set tags = None %}
+        {% end %}
+        {% module Template('common/add_tag.html', tags=tags) %}
+        <button id="producto-volver-5"><a>volver</a></button>
+        <button><a>archivar</a></button>
+        <button><a>previsualizar</a></button>
+        <button type="submit" id="submit_gallery_form"><a>publicar</a></button>
+        <!--button><a href="/galeria">publicar</a></button-->
+    </form>
+</div>

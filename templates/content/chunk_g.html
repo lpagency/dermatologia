@@ -1,0 +1,9 @@
+<div class="row">
+    {% for i in range(0, 1) %}
+    {% if len(content) > i %}
+    <div data-sr="enter bottom" class="col-sm-6 sobre-botones especial">
+        {{ contentType('xl', content[i], box_counter, site_base) }}
+    </div>
+    {% end %}
+    {% end %}
+</div>

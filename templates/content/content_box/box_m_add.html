@@ -1,0 +1,10 @@
+<div {% if box_counter != 0 %}data-sr{% end %} class="col-sm-12 sobre-botones ">
+    <a href="">
+        <img src="{{ site_base }}/static/img/0013.png" class="img-responsive" alt="item">
+    </a>
+    {% if is_admin %}
+    <span class="btn-modificar-cont btn-agregar-cont-principal btn-agregar-cont-caja ">
+        <i class="icon-plus"></i>
+    </span>
+    {% end %}
+</div>

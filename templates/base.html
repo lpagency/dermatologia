@@ -1,0 +1,388 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <!-- head bt inicio -->
+        <title>Dermatologia - Todo lo que quieres y necesitas saber.</title>
+        <base href="{% if environment == 'production' %}https://www.dermatologia.cl{% end %}{{ site_base }}/">
+        <meta charset="utf-8">
+        <meta name="description" content="Todo lo que quieres y necesitas saber.">
+        <meta name="author" content="loadingplay.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="jquery, vertical, scrolling, scroll, smooth"/>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300,400,600,600,700,700,800,800' rel='stylesheet' type='text/css'>
+        <!-- <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'> -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900,100' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css">
+        <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/style.css">
+        
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+        <!-- aqui se ponen los demas css -de las paginas -->
+        <link rel="stylesheet" href="{{ site_base }}/common/css/editableimage.css">
+
+
+        <!-- autocomplete
+        <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/js/plugins/selectize/selectize.css" />
+        <!-autocomplete -->
+        <link rel="stylesheet" href="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.css">
+
+        <link rel="stylesheet" href="{{ site_base }}/static/css/ligthbox-d.css">
+        <link rel="stylesheet" href="{{ site_base }}/static/css/gallery.css">
+
+        <!-- <link rel="stylesheet" href="{{ site_base }}/static/js/fancybox/source/jquery.fancybox.css?v=2.1.5"> -->
+
+        <link rel="stylesheet" href="{{ site_base }}/common/css/ellipsis.css">
+
+
+
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.css"/> -->
+
+        
+        {% block css %}{% end %}
+
+        {% include 'product/product_box.html' %}
+        {% include 'product/product_home.html' %}
+
+        {% if is_admin %}
+        {% set editabletext = 'editabletext' %}
+        {% else %}
+        {% set editabletext = '' %}
+        {% end %}
+
+    </head>
+
+ <!--    <div id="main-nav-fixed-navigation" class="fixed-menu">
+<nav class="navbar navbarcolor" role="navigation">
+ 
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse"
+    data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Desplegar navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+
+</div>
+
+ 
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="#" class="">Dermatologia.cl</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Cancer de piel</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Cirugia Cosmetica</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="pal hidden-xs">Cirugia Laser </a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Melasma</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Lipoaspiracion </a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Implante de pelo</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Laser Depilacion</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Terapia Fotodinamica</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Thermalift</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Ver más</a></li>
+
+
+        </ul>
+        
+     </div>
+
+     <div class="franja-color">
+         <h1 class="one">Dermatología.cl</h1>
+         <input type="text" name="search_query" value="" class="buscar-header-norm search-input" placeholder="Buscar">
+     </div>
+
+
+
+</nav>
+</div>
+ -->
+
+    <body>
+        {% block header %}{% end %}
+        {% block body %}{% end %}
+
+        <!-- gif loading editableimage -->
+        <img id="imgLOAD" width="50" height="50" src="{{ site_base }}/common/css/loading.gif" />
+
+        <script type="text/javascript">
+        var site_base = "{{ site_base }}"
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+        
+
+<!--         <script src="/path/to/parallax.js"></script> -->
+        
+<!--         <script type="text/javascript" src="{{ site_base }}/static/js/mlb.js"></script>
+
+        <script type="text/javascript" src="{{ site_base }}/static/js/me.js" ></script> -->
+
+        <!-- <script type="text/javascript" src="{{ site_base }}/static/js/main.js"></script> -->
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+         <script type="text/javascript" src="{{ site_base }}/static/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+
+        <!-- <script src="/node_modules/readmore-js/readmore.min.js"></script> -->
+
+        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.editable.js" ></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/editabletext.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/editablelink.js"></script>
+        <!-- {%!  end %} -->
+        <script type="text/javascript" src="{{ site_base }}/common/js/page_editable.js"></script>
+
+        <script type="text/javascript" src="{{ site_base }}/common/js/editableimage.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/bower/file_uploader/dist/fileuploader.js"></script>
+
+                <!-- carga de productos -->
+<!--          <script type="text/javascript" src="{{ site_base }}/static/js/plugins/jquery.lazyload.js"></script> -->
+        <!-- <script type="text/javascript" src="{{ site_base }}/static/js/imageloader.js" ></script> -->
+        
+        <script type="text/javascript" src="{{ site_base }}/common/js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/environment.detection.js"></script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.js"></script>
+<!--         // <script type="text/javascript" src="{{ site_base }}/static/js/fancybox/jquery.fancybox.pack.js"></script> -->
+<!--         <script type="text/javascript" src="{{ site_base }}/static/js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script> -->
+<!--         <script type="text/javascript" src="https://cdn.datatables.net/s/dt/dt-1.10.10/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script> -->
+
+        <!-- <script type="text/javascript" src="{{ site_base }}/static/js/jquery.ellipsis.js"></script> -->
+
+        <script type="text/javascript" src="{{ site_base }}/common/js/parallax.min.js"></script>
+
+
+         <script type="text/javascript" src="{{ site_base }}/common/js/jquery.ellipsis.js"></script>
+
+<!--         <div type="template" id="product_loading" style="display:none;" >
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div> -->
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $(".fancybox").fancybox({
+                    'width':800,
+                    'height':630,
+                    'autoSize' : false,
+                    'autoScale': false,
+                    'padding': 0,
+                    'helpers': {
+                            overlay: {
+                                locked: false
+                            }
+                        }
+                });
+            });
+        </script>
+
+        <script type="text/x-template" id="shopping-cart-total" >
+        </script>
+
+
+<!-- este es el script para unidades -->
+        <script type="text/x-template" id="shopping-cart-units-total" >
+            <span> {{! units_total }}</span>
+        </script>
+
+
+        <script type="text/x-template" id="shopping-cart-checkout-form" >
+            <form action="{{! checkout_url}}" method="get" novalidate id="shipping-form" class="myform">
+                <input name="site_id" class="form-control required" type="hidden" value="{{! site_id}}">
+                <input name="cart_id" class="form-control required" type="hidden" value="{{! cart_id}}">
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Proceed to checkout <i class="fa fa-chevron-right"></i></button>
+                </div>
+            </form>
+        </script>
+
+
+
+
+<!-- termino carrito de compra -->
+
+        {% block javascript %}{% end %}
+        <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '348231912006000',
+                xfbml: true,
+                version: 'v2.1'
+            });
+        };
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        {% if is_admin %}
+        <script type="text/javascript">
+        var site_name="{{site.name}}";
+        </script>
+        <script type="text/javascript" src="{{ site_base }}/common/js/contentmanager.js" ></script>
+
+        {% end %}
+
+        <script type="text/javascript" src"https://clouddelivery.textbox.io/1/getEditor?apiKey=1wugguwjiatkm69xmt7w1den1mpvqkxi75mwfmb49lz89o4r">
+        </script>
+
+
+        <script>
+/*            $(document).ajaxComplete(function()
+            {
+                var hash = window.location.hash;
+                // window.location.href= hash;
+                
+                if (hash !== "") 
+                {
+                    $('html,body').animate({
+                        scrollTop: $(hash).offset().top
+                    });
+                }
+            });
+*/        </script>
+
+<script type="text/javascript">
+        /* detect touch */
+if("ontouchstart" in window){
+    document.documentElement.className = document.documentElement.className + " touch";
+}
+if(!$("html").hasClass("touch")){
+    /* background fix */
+    $(".parallax").css("background-attachment", "fixed");
+}
+
+/* fix vertical when not overflow
+call fullscreenFix() if .fullscreen content changes */
+function fullscreenFix(){
+    var h = $('body').height();
+    // set .fullscreen height
+    $(".content-b").each(function(i){
+        if($(this).innerHeight() > h){ $(this).closest(".fullscreen").addClass("overflow");
+        }
+    });
+}
+$(window).resize(fullscreenFix);
+fullscreenFix();
+
+/* resize background images */
+function backgroundResize(){
+    // var windowH = $(window).height();
+    var windowH = 642; //***********
+    $(".background").each(function(i){
+        var path = $(this);
+        // variables
+        var contW = path.width();
+        var contH = path.height();
+        var imgW = path.attr("data-img-width");
+        var imgH = path.attr("data-img-height");
+        var ratio = imgW / imgH;
+        // overflowing difference
+        var diff = parseFloat(path.attr("data-diff"));
+        diff = diff ? diff : 0;
+        // remaining height to have fullscreen image only on parallax
+        var remainingH = 0;
+        if(path.hasClass("parallax") && !$("html").hasClass("touch")){
+            var maxH = contH > windowH ? contH : windowH;
+            remainingH = windowH - contH;
+        }
+        // set img values depending on cont
+        imgH = contH + remainingH + diff;
+        imgW = imgH * ratio;
+        // fix when too large
+        if(contW > imgW){
+            imgW = contW;
+            imgH = imgW / ratio;
+        }
+        //
+        path.data("resized-imgW", imgW);
+        path.data("resized-imgH", imgH);
+        // path.css("background-size", imgW + "px " + imgH + "px");
+        path.css("background-size","cover");
+    });
+}
+// $(window).resize(backgroundResize);
+// $(window).focus(backgroundResize);
+// backgroundResize();
+
+/* set parallax background-position */
+function parallaxPosition(e){
+    // var heightWindow = $(window).height();
+    var heightWindow = 642;
+    var topWindow = $(window).scrollTop();
+    var bottomWindow = topWindow + heightWindow;
+    var currentWindow = (topWindow + bottomWindow) / 2;
+    $(".parallax").each(function(i){
+        var path = $(this);
+        var height = path.height();
+        var top = path.offset().top;
+        var bottom = top + height;
+        // only when in range
+        if(bottomWindow > top && topWindow < bottom){
+            var imgW = path.data("resized-imgW");
+            var imgH = path.data("resized-imgH");
+            // min when image touch top of window
+            var min = 0;
+            // max when image touch bottom of window
+            var max = - imgH + heightWindow;
+            // overflow changes parallax
+            var overflowH = height < heightWindow ? imgH - height : imgH - heightWindow; // fix height on overflow
+            top = top - overflowH;
+            bottom = bottom + overflowH;
+            // value with linear interpolation
+            var value = min + (max - min) * (currentWindow - top) / (bottom - top);
+            // set background-position
+            var orizontalPosition = path.attr("data-oriz-pos");
+            orizontalPosition = orizontalPosition ? orizontalPosition : "50%";
+            $(this).css("background-position", orizontalPosition + " " + value + "px");
+        }
+    });
+}
+if(!$("html").hasClass("touch")){
+    $(window).resize(parallaxPosition);
+    //$(window).focus(parallaxPosition);
+    $(window).scroll(parallaxPosition);
+    parallaxPosition();
+}
+
+    </script>
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ get_config("analytics") }}', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    
+   
+    </body>
+</html>

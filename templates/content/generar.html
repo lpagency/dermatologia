@@ -1,0 +1,478 @@
+<div id="menu_movil" class="descripcion_wrapper descripcion_opacity b_wrapper" style="display:none;">
+  <div class="descripcion_cerrar">
+    <button id="tellmeboton2" style="font-size: 35px; color:gray !important"><i class="icon-remove"></i></button>
+  </div>
+  <div class="descripcion_contenido">
+    <div class="b_logo"> 
+      <h1>ELIGE UN TIPO DE CONTENIDO PARA CREAR</h1>
+      <ul>
+        <li><a id ="g-contenido" class="redes_sociales"><i class="fa icon-shopping-cart" ></i><p>Producto</p></a></li>
+        <li><a id="g-articulo" class="redes_sociales"><i class="fa icon-file-text-alt"></i> <p> Articulo </p> </a></li>
+        <li><a id="g-banner" class="redes_sociales"><i class="fa icon-picture"></i> <p> Banner </p> </a></li>
+        <li><a id="g-evento" class="redes_sociales"><i class="fa icon-glass"></i> <p> Evento </p> </a></li>
+        <li><a id="g-galeria" class="redes_sociales"><i class="fa icon-camera"></i> <p> Galeria </p> </a></li>
+        <li><a id="g-perfil"class="redes_sociales"><i class="fa icon-user"></i> <p> Perfil </p> </a></li>
+      </ul>
+    </div>
+    <!-- generar contenido producto -->
+    <div id="g-contenido-a" class="loginpopup">
+      <div style="width:100%;float:left;margin-bottom: 30px;">
+        <div  style="width:50%; float:left; border:1px solid gray;height: auto; float: left;">
+          <h2>NUEVO PRODUCTO</h2>
+        </div>
+        <div id="g-borradores" style="width:50%; float:left; cusor:pointer;">
+          <h2 >BORRADORES</h2>
+        </div>
+      </div>
+
+      <div class="form-group required">
+        <label class="control-label">Nombre producto</label>
+        <input required name="address" id="InputAddress" placeholder="Nombre" class="form-control" type="text">
+      </div> 
+      <div class="form-group required">
+        <label class="control-label">Foto</label>
+        <input required name="address" id="InputAddress" placeholder="máximo 5 fotos" class="form-control" type="text">
+        <div class="g-foto-miniatura"><span>x</span></div>
+        <div class="g-foto-miniatura"><span>x</span></div>
+        <div class="g-foto-miniatura"><span>x</span></div>
+        <div class="g-foto-miniatura"><span>x</span></div>
+        <div class="g-foto-miniatura"><span>x</span></div>
+
+      </div> 
+      <div class="form-group">
+        <label class="control-label" style="width:100%;text-align:left;">Descripci&oacute;n</label>
+        <div class="controles-editor-texto">
+         <!--  <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a>
+          <a><i class="fa icon-picture"></i></a> -->
+        </div>
+        <div class="controls">
+          <textarea name="comments" placeholder="ingresa una descripci&oacute;n para tuproducto" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+        </div>
+      </div> 
+
+      <div class="form-group required" style="width:45%; float:left; margin-right:5%;">
+        <label class="control-label">Precio</label>
+        <input required name="address" id="InputAddress" placeholder="$" class="form-control" type="text">
+      </div> 
+       <div class="form-group required" style="width:50%; float:left;">
+        <label class="control-label">cantidad</label>
+        <input required name="address" id="InputAddress" placeholder="1" class="form-control" type="text">
+      </div> 
+
+      <div class="form-group required">
+        <label class="control-label">crear o seleccionar tag</label>
+        <select name="city_id" id="InputCity" class="form-control">
+          <option value="">Selecciona un tag</option>
+
+          <option value="">Belleza</option>
+          <option value="">Cuerpo</option>
+          <option value="">Arte</option>
+          <option value="">Zapatos</option>
+
+        </select>
+      </div>
+      <div class="form-group required" >
+          <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+          <div class="g-contenedor-tag">
+            <div class="g-contenedor-tag-seleccionado">
+              <div style="float:left">belleza</div>
+              <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+            </div>
+          </div>
+        </div>   
+      <button id="producto-volver"><a>volver</a></button>     
+      <button ><a>archivar</a></button>
+      <button ><a>previsualizar</a></button>
+      <button ><a href="http://localhost:8513/product/Botin/Jabiru/brushoff%20morado">publicar</a></button>
+
+
+    </div>
+    <!-- generar contenido producto-->
+    <!-- lista borradores -->
+
+    <div id="g-borradores-a"class="loginpopup" >
+      <div style="width:100%;float:left;margin-bottom: 30px;">
+        <div class="producto-volver-b"  style="width:50%; float:left; ">
+          <h2>NUEVO PRODUCTO</h2>
+        </div>
+        <div style="width:50%; float:left;border:1px solid gray;height: auto; float: left;">
+          <h2 >BORRADORES</h2>
+        </div>
+      </div>
+
+      <div class="form-group required">
+      <label class="control-label" style="width:100%;text-align:left;">Producto uno</label>
+ <input required name="address" id="InputAddress" placeholder="Titulo" class="form-control" type="checkbox">
+      </div> 
+      <div class="form-group required" >
+        <label class="control-label" style="width:100%;text-align:left;">Producto dos</label>
+      </div> 
+      <div class="form-group">
+        <label class="control-label" style="width:100%;text-align:left;">Producto tres</label>
+      </div> 
+       <div class="form-group required">
+        <label class="control-label" style="width:100%;text-align:left;">Producto cinco</label>
+      </div> 
+      <div class="form-group required" >
+        <label class="control-label" style="width:100%;text-align:left;" >Producto seis</label>
+      </div>  
+
+      <button class="producto-volver-b" ><a>volver</a></button>     
+      <button ><a>previsualizar</a></button>
+      <button ><a>Publicar</a></button>
+
+
+    </div>
+    <!-- generar contenido -->
+    <!-- generar artículo -->
+    <div id="g-articulo-a" class="loginpopup">
+      <div style="width:100%;float:left;margin-bottom: 30px;">
+        <div  style="width:50%; float:left; border:1px solid gray;height: auto; float: left;">
+          <h2>NUEVO ARTICULO</h2>
+        </div>
+        <div style="width:50%; float:left;">
+          <h2>BORRADORES</h2>
+        </div>
+      </div>
+
+      <div class="form-group required">
+        <label class="control-label">Título</label>
+        <input required name="address" id="InputAddress" placeholder="Titulo" class="form-control" type="text">
+      </div> 
+      <div class="form-group required">
+        <label class="control-label">lead</label>
+        <input required name="address" id="InputAddress" placeholder="Sube un archivo" class="form-control" type="text">
+      </div> 
+
+      <div class="form-group">
+        <label class="control-label">Texto</label>
+        <div class="controls">
+          <textarea name="comments" placeholder="ingresa tu texto" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+        </div>
+      </div>
+      <div class="form-group required">
+        <label class="control-label">Foto</label>
+        <input required name="address" id="InputAddress" placeholder="Sube un archivo" class="form-control" type="text">
+        <div style="width:50px;height:50px; float:left; background-color: gray; color: gray; margin:10px 5px 5px 5px; text-align: right; padding: 7px;font-size: 18px;line-height: 0.4;"><span>x</span></div>
+      </div> 
+      <div class="form-group required">
+        <label class="control-label" style="width:100%;text-align:left;">crear o seleccionar tag</label>
+        <select name="city_id" id="InputCity" class="form-control">
+          <option value="">Selecciona un tag</option>
+
+          <option value="">tag</option>
+          <option value="">tag</option>
+          <option value="">tag</option>
+          <option value="">tag</option>
+
+        </select>
+      </div> 
+      <div class="form-group required" >
+          <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+          <div class="g-contenedor-tag">
+            <div class="g-contenedor-tag-seleccionado">
+              <div style="float:left">belleza</div>
+              <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+            </div>
+          </div>
+        </div>    
+      <button id="articulo-volver"><a>volver</a></button>     
+      <button ><a>archivar</a></button>
+      <button ><a>previsualizar</a></button>
+      <button ><a href="/article">publicar</a></button>
+
+
+    </div>
+    <!-- generar artículo -->
+    <!-- generar banner -->
+    <div id="g-banner-a"class="loginpopup">
+      <div style="width:100%;float:left;margin-bottom: 30px;">
+        <div  style="width:50%; float:left; border:1px solid gray;height: auto; float: left;">
+          <h2>NUEVO BANNER</h2>
+        </div>
+        <div style="width:50%; float:left;">
+          <h2>BORRADORES</h2>
+        </div>
+      </div>
+
+      <div class="form-group required">
+        <label class="control-label">Foto</label>
+        <input required name="address" id="InputAddress" placeholder="Subir un archivo" class="form-control" type="text">
+      </div> 
+
+      <div class="form-group required">
+        <label class="control-label">url</label>
+        <input required name="address" id="InputAddress" placeholder="Ingresar direcci&oacute;n web" class="form-control" type="text">
+      </div> 
+      <div class="form-group required">
+        <label class="control-label">crear o seleccionar tag</label>
+        <select name="city_id" id="InputCity" class="form-control">
+          <option value="">Selecciona un tag</option>
+
+          <option value="">Belleza</option>
+          <option value="">Cuerpo</option>
+          <option value="">Arte</option>
+          <option value="">Zapatos</option>
+
+        </select>
+      </div>
+      <div class="form-group required" >
+          <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+          <div class="g-contenedor-tag">
+            <div class="g-contenedor-tag-seleccionado">
+              <div style="float:left">belleza</div>
+              <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+            </div>
+          </div>
+        </div>   
+      <button id="producto-volver-3"><a>volver</a></button>     
+      <button ><a>archivar</a></button>
+      <button ><a>previsualizar</a></button>
+      <button ><a href="/">publicar</a></button>
+
+
+    </div>
+    <!-- generar banner -->
+    <!-- generar evento -->
+    <div id="g-evento-a"class="loginpopup">
+      <div style="width:100%;float: left;margin-bottom: 30px;">
+        <div  style="width:50%; float:left; border:1px solid gray;height: auto; ">
+          <h2>NUEVO EVENTO</h2>
+        </div>
+        <div style="width:50%; float:left;">
+          <h2>BORRADORES</h2>
+        </div>
+      </div>
+
+      <div class="form-group required">
+        <label class="control-label">Nombre evento</label>
+        <input required name="address" id="InputAddress" placeholder="Ingrsar nombre de evento" class="form-control" type="text">
+      </div> 
+      <div class="form-group required">
+        <label class="control-label">Foto</label>
+        <input required name="address" id="InputAddress" placeholder="Subir un archivo" class="form-control" type="text">
+        <div class="g-foto-miniatura"><span>x</span></div>
+      </div> 
+
+      <div class="form-group required">
+        <label class="control-label" style="width:100%;text-align:left;">Texto</label>
+        <textarea required name="address" id="InputAddress" placeholder="Ingresa la informacion del evento" class="form-control" type="textarea"></textarea>
+      </div> 
+      <div class="form-group required">
+        <label class="control-label">fecha</label>
+        <select name="city_id" id="InputCity" class="form-control">
+          <option value="">seleccionar dia</option>
+
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+
+        </select>
+      </div>  
+      <div class="form-group required">
+        <label class="control-label">Sumar formulario</label>
+        <input required name="address" id="InputAddress" placeholder="Pegar url de formulario correspondiente..." class="form-control" type="text">
+      </div> 
+      <div class="form-group required">
+        <label class="control-label">crear o seleccionar tag</label>
+        <select name="city_id" id="InputCity" class="form-control">
+          <option value="">Selecciona un tag</option>
+
+          <option value="">tag</option>
+          <option value="">tag</option>
+          <option value="">tag</option>
+          <option value="">tag</option>
+
+        </select>
+      </div>
+          <div class="form-group required" >
+          <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+          <div class="g-contenedor-tag">
+            <div class="g-contenedor-tag-seleccionado">
+              <div style="float:left">belleza</div>
+              <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+            </div>
+          </div>
+        </div>    
+      <button id="producto-volver-4"><a>volver</a></button>     
+      <button ><a>archivar</a></button>
+      <button ><a>previsualizar</a></button>
+      <button ><a href="/event">publicar</a></button>
+
+
+    </div>
+    <!-- generar evento-->
+    <!-- generar contenido galeria -->
+    <div id="g-galeria-a"class="loginpopup">
+      <div style="width:100%;float:left;margin-bottom: 30px;">
+        <div  style="width:50%; float:left; border:1px solid gray;height: auto; float: left;">
+          <h2>NUEVA GALERIA</h2>
+        </div>
+        <div style="width:50%; float:left;">
+          <h2>BORRADORES</h2>
+        </div>
+      </div>
+
+      <div class="form-group required">
+        <label class="control-label">Nombre galería</label>
+        <input required name="address" id="InputAddress" placeholder="Nombre" class="form-control" type="text">
+      </div> 
+      <div class="form-group required">
+        <label class="control-label">Seleccione Fotografias</label>
+        <input required name="address" id="InputAddress" placeholder="Fotos para el producto" class="form-control" type="text">
+        <div class="g-foto-miniatura"><span>x</span></div>
+        <div class="g-foto-miniatura"><span>x</span></div>
+        <div class="g-foto-miniatura"><span>x</span></div>
+        <div class="g-foto-miniatura"><span>x</span></div>
+        <div class="g-foto-miniatura"><span>x</span></div>
+      </div> 
+      <div class="form-group">
+        <label class="control-label" style="width:100%;text-align:left;">Descripci&oacute;n</label>
+        <div class="controls">
+          <textarea name="comments" placeholder="ingresa una descripci&oacute;n para tuproducto" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+        </div>
+      </div> 
+      <div class="form-group required">
+        <label class="control-label">crear o seleccionar tag</label>
+        <select name="city_id" id="InputCity" class="form-control">
+          <option value="">Agregar tags</option>
+
+          <option value="">tag</option>
+          <option value="">tag</option>
+          <option value="">tag</option>
+          <option value="">tag</option>
+
+        </select>
+      </div> 
+         <div class="form-group required" >
+          <label class="control-label" style="width:100%; text-align:left">crear o seleccionar tag</label>
+          <div class="g-contenedor-tag">
+            <div class="g-contenedor-tag-seleccionado">
+              <div style="float:left">belleza</div>
+              <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+            </div>
+          </div>
+        </div>  
+      <button id="producto-volver-5"><a>volver</a></button>     
+      <button ><a>archivar</a></button>
+      <button ><a>previsualizar</a></button>
+      <button ><a href="/galeria">publicar</a></button>
+
+
+    </div>
+    <!-- generar galeria -->
+    <!-- generar contenido Perfil -->
+    <div id="g-perfil-a"class="loginpopup">
+      <!-- paso 1 -->
+      <div id="paso-uno-perfil">
+        <div style="width:100%;float:left;margin-bottom: 30px;">
+          <div  style="width:100%%; float:left; border:1px solid gray;height: auto; float: left;">
+            <h2>Buscar socia</h2>
+          </div>
+
+        </div>
+
+        <div class="form-group required">
+          <label class="control-label" style="width:100%; text-align:left">Ingresar nombre de socia</label>
+          <!-- <input required name="address" id="InputAddress" placeholder="Nombre" class="form-control" type="text"> -->
+          <div class="g-contenedor-tag">
+            <div class="g-contenedor-tag-seleccionado">
+              <div style="float:left">belleza</div>
+              <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+            </div>
+          </div>
+        </div>  
+       
+        <button id="producto-volver-6"><a>volver</a></button>     
+        <button id="proximo-paso-perfil"><a>siguiente</a></button>
+      </div>
+      <!-- paso 1 -->
+      <!-- paso 2 -->
+      <div id="paso-dos-perfil" style="display:none;">
+        <div style="width:100%;float:left;margin-bottom: 30px;">
+          <div  style="width:100%; float:left; border:1px solid gray;height: auto; float: left;">
+            <h2>Ingresar datos de socia</h2>
+          </div>
+
+        </div>
+        <div style="width:100%;float:left;margin-bottom: 30px;">
+          <div style="width:45%; float:left; height: auto; float: left; margin-right:5%;">
+            <label class="control-label">foto perfil</label>
+            <img src="{{ site_base }}/static/img/0013.png" style="width:100%; margin-bottom:17px;">
+            <div class="form-group required">
+              <label class="control-label">Seleccionar un archivo</label>
+              <input required name="address" id="InputAddress" placeholder="Imagen" class="form-control" type="text">
+            </div> 
+          </div>
+          <div style="width:45%; float:left; height: auto; float: left; margin-left:5%;">
+            <label class="control-label">foto logotipo</label>
+            <img src="{{ site_base }}/static/img/0013.png" style="width:100%; margin-bottom:17px;">
+            <div class="form-group required">
+              <label class="control-label">Seleccionar un archivo</label>
+              <input required name="address" id="InputAddress" placeholder="Imagen" class="form-control" type="text">
+            </div> 
+          </div>
+          <div style="width:100%; float:left; height: auto; float: left;">
+            <div class="form-group required">
+              <!-- <label class="control-label">Nombre</label> -->
+              <input required name="address" id="InputAddress" placeholder="Nombre" class="form-control" type="text">
+            </div> 
+            <div class="form-group required">
+              <!-- <label class="control-label">Apellido</label> -->
+              <input required name="address" id="InputAddress" placeholder="Apellido" class="form-control" type="text">
+            </div> 
+            <div class="form-group required">
+              <!-- <label class="control-label">Productos</label> -->
+              <input required name="address" id="InputAddress" placeholder="Productos" class="form-control" type="text">
+            </div> 
+            <div class="form-group">
+             <!--  <label class="control-label">Descripci&oacute;n</label> -->
+              <div class="controls">
+                <textarea name="comments" placeholder="ingresa una descripci&oacute;n para tus producto" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+              </div>
+            </div> 
+            <div class="form-group required">
+              <!-- <label class="control-label">Correo contacto</label> -->
+              <input required name="address" id="InputAddress" placeholder="Mail" class="form-control" type="text">
+            </div> 
+            <div class="form-group required">
+              <!-- <label class="control-label">Telefono</label> -->
+              <input required name="address" id="InputAddress" placeholder="Telefono" class="form-control" type="text">
+            </div>
+          </div>
+
+
+        </div>
+        <div class="form-group required" >
+          <label class="control-label" style="width:100%; text-align:left">Seleccionar tag</label>
+          <div class="g-contenedor-tag">
+            <div class="g-contenedor-tag-seleccionado">
+              <div style="float:left">Socia ficticia productos</div>
+              <div style="float:right;margin-left: 10px;margin-top: -9px;">x</div>
+            </div>
+          </div>
+        </div> 
+        <div class="form-group required">
+          <label class="control-label">Crea tu url</label>
+          <input required name="address" id="InputAddress" placeholder="http://me.cl/tu-direccion" class="form-control" type="text">
+        </div> 
+        <button id="producto-volver-7"><a>volver</a></button> 
+        <button id=""><a>archivar</a></button>  
+        <button id=""><a>previsualizar</a></button>      
+        <button ><a href="/perfil" >publicar</a></button>
+      </div>
+      <!-- paso 2 -->
+    </div>
+    <!-- generar perfil -->
+  </div>
+</div> 

@@ -1,0 +1,62 @@
+ {% if is_admin %}
+    {% set editabletext = 'editabletext' %}
+{% else %}
+    {% set editabletext = '' %}
+{% end %}
+
+  
+<nav class="navbar navbarcolor" role="navigation">
+  <!-- El logotipo y el icono que despliega el menú se agrupan
+  para mostrarlos mejor en los dispositivos móviles -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse"
+    data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Desplegar navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <!--  <a class="navbar-brand navbar-logo" href="{{ site_base }}/" > 
+              {% if is_admin %}
+                  <div class="image-upload">
+                 
+                      <label for="{{ site.name }}_site_logo">
+                      <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png';">
+                      </label>
+                      <input type="file" class="editableimage" image-id="{{ site.name }}_site_logo" name="image" id="{{ site.name }}_site_logo" >
+                  </div>
+              {% end %}
+              <img id="{{ site.name }}_site_logo" src="{{ read_image(site.name + '_site_logo') }}" onload="this.onload='';this.src='{{ read_image(site.name + '_site_logo',500) }}'" class="logo" alt="item" width="150" />
+        <a class="navbar-brand" href=""></a> -->
+</div>
+
+  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+  otro elemento que se pueda ocultar al minimizar la barra -->
+
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="#" class="">Dermatologia.cl</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Cancer de piel</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Cirugia Cosmetica</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Cirugia Laser </a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Melasma</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Lipoaspiracion </a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Implante de pelo</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Laser Depilacion</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Terapia Fotodinamica</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Thermalift</a></li>
+                <li class="pip hidden-sm hidden-xs">|</li>
+                <li><a href="#" class="">Ver más</a></li>
+        </ul>
+
+        </div>
+</nav>

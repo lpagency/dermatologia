@@ -1,0 +1,79 @@
+<button class="button-nav-toggle" style="width:40px;height:40px;"></button>
+<div class="menu">
+  <nav class="nav-main">
+    <div class="nav-container">
+      <ul>
+        <li class="menu-ti">EDITOR ESTILO</li>
+        <li class="menu-st">Header</li>
+        <li class="menu-te"> <a href="#">menu</a>
+          <ul>
+            <li class="menu-ti" ><a href="#" class="back"><strong>Tipos de menu</strong></a></li>
+            <li class="menu-te"><a href="#" >Menu 1</a></li>
+            <li class="menu-te"><a href="#">menu 2</a></li>
+          </ul>
+        </li>
+        <li class="menu-te"> <a href="#">Logo</a>
+          <ul>
+            <li class="menu-ti" > <a href="#" class="back"><strong>Logo</strong></a></li>
+            <button class="btn-menu">Subir imagen</button>
+            <!-- <input class="" type="file" name="imagen" id="imagen" /> -->
+          </ul>
+        </li>
+        <li class="menu-st">Contenedor</li>
+        <li class="menu-te"> <a href="#">color fondo</a>
+          <ul>
+            <li class="menu-ti" > <a href="#" class="back"><strong>color fondo</strong></a></li>
+            <li> <div id="picker"></div> </li>
+          </ul>
+        </li>
+        <li class="menu-te"> <a href="#">productos</a>
+          <ul>
+            <li class="menu-ti" > <a href="#" class="back"><strong>Productos</strong></a></li>
+            <li class="menu-te" style="float: left;width: 100%;height: 70px;"><div class="" style="float:left;margin-top: 14px;width: 20px;height: auto;">X</div> <div class="" style="float:left;float: left;width: 30px;height: auto;margin-top: 14px;">fila</div>
+            <!-- slider -->
+            <div class="photo-slider wallop-slider wallop-slider--slide" style="float: right;width: 120px;height: auto;margin-right: 18px;">
+              <div style="width:100%; height:auto; overflow:hidden; position:relative;">
+                <ul class="wallop-slider__list" style="right:0; position: inherit; padding: 0px;width: 100%;">
+                  <li class="wallop-slider__item wallop-slider__item--current"><img src="{{ site_base }}/static/menu/images/row1.png"></li>
+                  <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row2.png"></li>
+                  <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row3.png"></li>
+                  <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row4.png"></li>
+                  <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row5.png"></li>
+                  <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row6.png"></li>
+                  <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row7.png"></li>
+                  <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row8.png"></li>
+                  <li class="wallop-slider__item"><img src="{{ site_base }}/static/menu/images/row9.png"></li>
+                </ul>
+               </div> 
+              <button class="wallop-slider__btn wallop-slider__btn--previous btn btn--previous wallop-btn-base" disabled style="top: 13px;left: -29px;"><</button>
+              <button class="wallop-slider__btn wallop-slider__btn--next btn btn--next wallop-btn-base" style="top: 13px;right: -29px;">></button>
+            </div>
+            <!-- slider -->
+            
+            </li>
+            <button class="btn-menu btn-menu-top">+ agregar row</button>
+          </ul>
+        </li>
+        
+      </ul>
+      <ul style="top:0px;" >
+        <li class="menu-st">Diseños anteriores</li>
+        <li class="menu-te"> <a href="#">todos los diseños</a>
+          <ul>
+            <li class="" > <a href="#" class="back"><strong>DISEÑOS ANTERIORES</strong></a></li>
+            <li><a href="#">Diseño 1</a></li>
+            <li><a href="#">Diseño 2</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+    <div class="campo_guardar" style="bottom: 0;position: absolute;display:none;">
+            <input class="campo_guandar_input" type="text" placeholder="NOMBRE DISEÑO">
+            <button class="btn-menu">Guardar</button>
+    </div>
+    <div class="campo_guardar" style="bottom: 0;position: absolute;">
+            <button class="btn-menu">actualizar</button>
+    </div>
+  </nav>
+</div>

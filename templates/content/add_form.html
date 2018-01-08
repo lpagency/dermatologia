@@ -1,0 +1,18 @@
+<div class="b_logo">
+    <h1>ELIGE UN TIPO DE CONTENIDO PARA CREAR</h1>
+    <ul>
+        <li><a id="g-contenido" class="redes_sociales"><i class="fa icon-shopping-cart" ></i><p>Producto</p></a></li>
+        <li><a id="g-articulo" class="redes_sociales"><i class="fa icon-file-text-alt"></i> <p> Articulo </p> </a></li>
+        <li><a id="g-banner" class="redes_sociales"><i class="fa icon-picture"></i> <p> Banner </p> </a></li>
+        <li><a id="g-evento" class="redes_sociales"><i class="fa icon-glass"></i> <p> Evento </p> </a></li>
+        <li><a id="g-galeria" class="redes_sociales"><i class="fa icon-camera"></i> <p> Galeria </p> </a></li>
+        <li><a id="g-perfil" class="redes_sociales"><i class="fa icon-user"></i> <p> Perfil </p> </a></li>
+    </ul>
+</div>
+<!-- generar contenido producto -->
+{% module Template('article/add.html', site_base=site_base, site=site, data=None) %}
+{% module Template('product/add.html', site_base=site_base, site=site, data=None) %}
+{% module Template('banner/add.html', site_base=site_base, site=site, data=None) %}
+{% module Template('event/add.html', site_base=site_base, site=site, data=None) %}
+{% module Template('gallery/add.html', site_base=site_base, site=site, data=None) %}
+{% module Template('profile/add.html', site_base=site_base, site=site, data=None) %}

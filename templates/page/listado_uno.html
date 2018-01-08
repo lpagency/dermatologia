@@ -1,0 +1,101 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+ {% include '../home/header_inside.html' %}
+{% end %}
+
+
+{% block body %}
+{% if is_admin %}
+    {% set editabletext = 'editabletext' %}
+{% else %}
+    {% set editabletext = '' %}
+{% end %}
+
+
+
+<section>
+      <div class="">
+        {% if is_admin %}
+               <div class="image-upload part1 lapiz visible-movil">
+                   <label for="img_banner_cate_li">
+                       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                   </label>
+                   <input type="file" class="editableimage" image-id="{{ site.name }}_banner_cate_li" name="image" id="img_banner_cate_li" >
+               </div>
+        {% end %}
+                <img id="{{ site.name }}_banner_cate_li" src="{{ read_image(site.name + '_banner_cate_li', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_cate_li',500) }}'" class="banner_uno_list" alt="item">
+
+                <div class="col-md-12">
+                    <h1 class="text-center titulo {{editabletext}}" text-id="{{ site.name + '_til_li' }}"> {{ read_text(site.name +  '_til_li') }}</h1>
+                </div>
+
+       </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="bajada text-center {{editabletext}}" text-id="{{ site.name + '_baj_li' }}"> {{ read_text(site.name +  '_baj_li') }} </h1>
+        </div>
+    </div>
+
+</section>
+
+<!-- 
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-xs-12">
+                <img class="img-responsive img-1" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf">contenido</p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <img class="img-responsive img-2" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf">contenido</p>
+            </div>
+            <div class="col-md-3 col-xs-12">
+                <img class="img-responsive img-3" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf2">contenido</p>
+            </div>
+             <div class="col-md-3 col-xs-12">
+                <img class="img-responsive img-3" src="https://7static.loadingplay.com/static/images/19729ec1fa62f98c3fe0454154017acb_skinface.png">
+                <p class="inf2">contenido</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section id="contenedor">
+    <div class="container">
+        <div class="row">
+           {{ getArticleList('dermatologia') }}
+        </div>
+    </div>
+
+</section>
+
+
+<!--
+<section>
+    <div class="row">
+       <div align="center">
+            <div class="col-md-12 col-xs-12">
+                <a href="#">
+                <button type="button" class="btn btn-cargar">Cargar más contenido </button>
+                </a>
+            </div>
+       </div>
+</section>
+-->
+
+
+
+{% include '../home/footer.html' %}
+
+{% end %}
+

@@ -1,0 +1,158 @@
+{% extends "../base.html" %}
+{% block title %}
+    {{ site.name }}
+{% end %}
+{% block css %}
+<link href="https://fonts.googleapis.com/css?family=Lato" type="text/css"/>
+{% if is_admin %}
+<link rel="stylesheet" href="{{ site_base }}/static/css/textbox_io.css" type="text/css">
+<link rel="stylesheet" href="{{ site_base }}/static/css/detalle_articulos.css">
+<script type="text/javascript" src="{{ site_base }}/static/js/article/detail.js"></script>
+{% end %}
+<style type="text/css">
+    html, body{
+       height: 100%;
+    }
+
+      @media screen and (max-width: 700px){
+        .ol{
+          visibility: hidden;
+        }
+      
+        .franja-color{
+            background: transparent;
+        }
+    }
+
+
+</style>
+{% end %}
+
+{% block header %}
+{% include '../home/header_inside.html' %}
+{% end %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ site_base }}/static/js/dermatologia.js"></script>
+
+
+
+{% end %}
+
+{% block body %}
+
+        <!-- registration -->
+        
+<section>
+      <div class="mobile-det derma-banner" style="background:url('{{ article['thumb_500'] }}'); background-attachment:fixed; height:620px; background-size:cover; margin-top: -180px;  filter: grayscale(0%) brightness(65%);-webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);-ms-filter: grayscale(0%) brightness(65%);-o-filter: grayscale(0%) brightness(65%);">
+       
+        <img class="fondo-articulo hidden" src="{{ article["thumb_500"] }}" class="img-responsive lazy" data-original="{{ article["url"] }}" alt="item">
+
+               <!--  <div class="col-md-12">
+                    <h1 class="text-center det-art {{editabletext}}" text-id="{{ site.name + '_det_1' }}"> {{ read_text(site.name +  '_det_1') }}</h1>
+                </div> -->
+       </div>
+          <div class="col-md-12">
+                   <div align="center">
+                   <a href="#first-page-scroll" class="anchorLink">
+                       <div class="contenedor-circulo">
+                           <div  class="circulo-bajada" >
+                              <i class="fa fa-chevron-circle-down"  aria-hidden="true"></i> 
+                           </div>
+                       
+                       </div>
+                    </a>
+                   </div>
+          </div>
+</section>
+<!-- 
+<section >
+        <div class="container"> 
+           <div class="row">
+               <div class="col-md-12">
+                   <h2 class="text-center sub-detail-art {{editabletext}}" text-id="{{ site.name + '_det_2' }}"> {{ read_text(site.name +  '_det_2') }}</h2>
+               </div>
+           </div>
+        </div>
+</section> -->
+
+
+
+        <div id="first-page-scroll" class="container-fluid-art cart-list productlist" >
+            <div class="row cero" >
+                <div class="col-sm-12 blog-content">
+                        <input type="hidden" id="article-description-ajax-url" value="{{ site.url }}article/update-description">
+                        <input type="hidden" id="article-content-id" value="{{article['id']}}">
+                        <div class="col-sm-12 blog-content" style="margin-bottom: 30px;">
+                            <h1 class="text-center h1-art til-ban">
+                                {{ article["title"] }}
+                            </h1>
+                            <div class="post-date" style="text-align:center;">
+                                <br>
+                            <!-- {{ article["creation_date"].strftime("%d %b %Y") }} -->
+                            </div>
+                        </div>
+
+                        <div class="content articulo-text" style="text-align:center; float:left;">
+                            <div class="col-sm-12 especial">
+                                <h2 class="h2-art til-ban-2" style="  color: #848484;font-weight: 300;">{{ article["caption"] }}
+                             
+                                </h2>
+                            </div>
+                            
+                            <div align="center">
+                                <div class="col-md-12 content-picture">
+                                    <!-- <div>
+                                        <img class="medium" src="{{ site_base }}/static/img/0013.png" class="lazy" data-original="{{ article["thumb_500"] }}" offsetx="{{ article["offset_x"] }}" offsety="{{ article["offset_y"] }}" alt="item">
+                                    </div> -->
+                                </div>
+                            </div>
+                            
+                           <!--  <div class="col-sm-12 especial"> -->
+                           <div align="center">
+                               <div class="col-sm-12 especial">
+                                   <div class="col-xs-12 col-sm-10 col-md-10 col-md-offset-1 col-sm-offset-1">
+                                        <div id="description" class="p-art dan">
+                                            {{ article["description"] }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                            <div class="col-sm-12 especial p-art" style="text-align: right;">
+                            </div>
+                            <div class="col-sm-12 p-art ">
+                                tags | <a>{{ "</a> , <a>".join(article["tags"]) }}</a>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-sm-3 blog-sidebar">
+                    <div class="widget" style="text-align:left;">
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- row 4 -->
+        </div>
+
+    <div id="contenedor" class="container-fluid productlist">
+            <article>
+                <header>
+                    <h1 class="h1-art especial text-center" >Contenido relacionado a este articulo</h1>
+                </header>
+            </article>
+            <div class="row cont-rel">
+                {{ getRelatedArticles(article["id"]) }}
+            </div>
+     </div>
+
+        <div  class="carritoproductos clearfix">
+            <div class="flecha clearfix">
+            </div>
+        </div>
+ 
+
+{% include '../home/footer.html' %}
+{% end %}

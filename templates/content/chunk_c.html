@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-sm-4 special">
+        {% for i in range(0, 4) %}
+        {% if len(content) <= i %}
+        {% break %}
+        {% end %}
+            <div class="col-sm-6" style="padding:0 !important;" >
+            {{ contentType('xs', content[i], box_counter, site_base) }}
+            </div>
+        {% end %}
+    </div>
+    {% if len(content) >= 5 %}
+    <div data-sr="enter bottom" class="col-sm-4 special">
+        {{ contentType('m', content[4], box_counter, site_base) }}
+    </div>
+    {% end %}
+    <div class="col-sm-4 special">
+        {% for i in range(5, 9) %}
+        {% if len(content) <= i %}
+        {% break %}
+        {% end %}
+            <div class="col-sm-6" style="padding:0 !important;">
+            {{ contentType('xs', content[i], box_counter, site_base) }}
+            </div>
+        {% end %}
+    </div>
+</div>

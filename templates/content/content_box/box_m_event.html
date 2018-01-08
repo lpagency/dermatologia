@@ -1,0 +1,20 @@
+<div {% if box_counter != 0 %}data-sr='over 0.1s {% end %}' class="col-sm-12 sobre-botones cont-rel-event caja-m box-display">
+    <div box-id="{{ box_index }}" class="img-drag-to" style="float: left; width: 100%; height: 100%; position: absolute; z-index: 1; display: none;"><img src="https://static.loadingplay.com/static/images/500_8005b0a91f6f679934f6ee6f8ba43c18_move-here2.png" style="width: 100%;"></div>
+    <div class="cont-modifi" style="background:url('{{ cnt["thumb_1"] }}')" >
+        {% include box_menu.html %}
+        <a href="{{ site_base }}/event/detail/url_amigable/{{ cnt["id"] }}">
+            <div class="cont-boxes" style="background:url('{{ cnt["thumb_1"] }}')" >
+                <div class="box-event">
+                    <div class="vertical-center-cont">
+                          <div class="box-event-date">
+                                <h3>{% try %}{{ cnt["begin"].strftime("%d") }}{% except %}{% end %}</h3> 
+                                <p>{% try %}{{ cnt["begin"].strftime("%b") }}{% except %}{% end %}</p> 
+                          </div>
+                          <h2 class="box-event-h2">{{ cnt["title"] }}</h2>
+                        </div>
+                </div>
+                <img src="{{ cnt["thumb_1"] }}" thumb="{{ cnt["thumb_1"] }}" offsetx="{{ cnt["offset_x"] }}" offsety="{{ cnt["offset_y"] }}" data-original="{{ cnt["thumb_500"] }}" class=" lazy " alt="item" />
+            </div>
+        </a>
+    </div>
+{% if is_admin %}{% include box_edit_menu.html %}{% end %}</div>

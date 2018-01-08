@@ -1,0 +1,102 @@
+<form method="post" class="product-form product-add-form" action="{{ site_base }}/product/add" enctype="multipart/form-data" >
+    <div id="g-contenido-a" class="loginpopup step_two">
+        <div class="g-header-form">
+            <div class="g-header-button g-header-button-active">
+                <h2>NUEVO PRODUCTO</h2>
+            </div>
+            <div id="g-borradores" class=" g-header-button">
+                <h2>BORRADORES</h2>
+            </div>
+        </div>
+        <input type="hidden" name="content_id" value="{% if data is not None %}{{data.id}}{% end %}">
+        <div class="form-group required">
+            <label class="control-label">Nombre producto</label>
+            <input name="name" id="InputAddress" placeholder="ingresa un nombre para tu producto" class="form-control" type="text" value="{% if data is not None %}{{data.title}}{% end %}">
+            <div for="name" class="error g-alert" >Ingresa un nombre de producto</div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Descripci&oacute;n</label>
+            <div class="controls">
+                <textarea class="textboxio" name="description">
+                {% if data is not None %}
+                {{data.description}}
+                {% end %}
+                </textarea>
+            </div>
+        </div>
+        <div class="form-group required" style="float:left;">
+            <label class="control-label" >Agregar Foto</label>
+            <div id="product-list">
+                <input type="file" name="image" lp-image-loader class="form-input-hided content-add-form-input" id="product-input-image" multiple>
+                <div class="content-add-form-prev-data hidden" >
+                    {% if data is not None %}{{ data.getJSONImageList() }}{% end %}
+                </div>
+            </div>
+            <!-- <div class="input_name">
+                <div class="form-add-image" id="product-add-image-button">
+                    <i class="icon-plus icon-generic"></i>
+                    <img style="opacity: 0" src="" class="image-preview" id="preview-image-holder">
+                    
+                </div>
+            </div> -->
+            <div for="image" class="error g-alert" >Agrega una imagen | debe ser png</div>
+            
+        </div>
+        <div class="form-group required" >
+            <label class="control-label">Precio</label>
+            <input name="price" id="InputAddress" placeholder="$" class="form-control" type="text" value="{% if data is not None %}{{data.price}}{% end %}">
+            <div for="price" class="error g-alert" >Ingresa un precio</div>
+        </div>
+        <div class="form-group required">
+            <label class="control-label">Cantidad</label>
+            <input name="stock" id="InputAddress" placeholder="1" class="form-control" type="text" value="{% if data is not None %}{{data.stock}}{% end %}">
+            <div for="stock" class="error g-alert" >Ingresa una cantidad</div>
+        </div>
+        <div class="form-group" >
+            {% if data is not None %}
+                {% set tags = data.tag_list %}
+            {% else %}
+                {% set tags = None %}
+            {% end %}
+            {% module Template('common/add_tag.html', tags=tags) %}
+        </div>
+        
+        
+
+        <div class="form-group" >
+            <button id="producto-volver"><a>volver</a></button>
+            <button><a>archivar</a></button>
+            <button><a>previsualizar</a></button>
+            <button type="submit" class="product-add" ><a>publicar</a></button>
+        </div>
+    </div>
+    <!-- generar contenido producto-->
+
+    <!-- inicio lista borradores -->
+    <div id="g-borradores-a" class="loginpopup">
+        <div class="g-header-form">
+            <div class="producto-volver-b g-header-button">
+                <h2>NUEVO PRODUCTO</h2>
+            </div>
+            <div class="g-header-button g-header-button-active">
+                <h2>BORRADORES</h2>
+            </div>
+        </div>
+        <!-- comienzo lista -->
+        <div class="content-archives-no-public">
+            <ul class="archives-stuff">
+                <li>
+                    <p>producto_uno_productors_uno_productos_</p>
+                    <button><a>archivar</a></button>
+                    <button><a>publicar</a></button>
+                </li>
+            </ul>
+        </div>
+        <!-- fin lista -->
+        <button class="producto-volver-b"><a>volver</a></button>
+        <button><a>previsualizar</a></button>
+        <button><a>Publicar</a></button>
+    </div>
+    <!-- fin lista borradores -->
+    <!-- generar contenido -->
+</form>

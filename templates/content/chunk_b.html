@@ -1,0 +1,7 @@
+<div class="row">
+    {% for cnt in content %}
+    <div class="col-sm-4 special">
+        {{ contentType('m', cnt, box_counter, site_base) }}
+    </div>
+    {% end %}
+</div>

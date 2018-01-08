@@ -1,0 +1,25 @@
+<!-- @todo : check if ths can be optimized -->
+{% from tornado.options import options %}
+<div class="modifi" style="display:none; background:url('{{ cnt["thumb_1"] }}')" >
+    <button class="cerrar-opciones" >
+        <i class="icon-remove"></i>
+    </button>
+    <ul class="vertical-center-cont">
+        <li>
+            <a href="{{ options.content_manager_url }}me/content/edit?id={{ cnt["id"] }}&content_type={{ cnt["content_type"] }}" class="edit_button btn-agregar-cont-principal" >Editar</a>
+        </li>
+        <li>
+            <a href="{{ site_base }}/content/remove?id={{ cnt["id"] }}" >Archivar</a>
+        </li>
+        <li>
+            {% if cnt["hide_from_home"] is False %}
+            <a href="{{ site_base }}/content/hide_from_home?id={{ cnt["id"] }}">Ocultar del home</a>
+            {% else %}
+            <a href="{{ site_base }}/content/show_at_home?id={{ cnt["id"] }}">Mostrar en home</a>
+            {% end %}
+        </li>
+        <li>
+            <a>Orden : </a><input type="text" style="width:100px" class="edit-order" content-id="{{ cnt["id"] }}" page="{{ page_uri }}" value="{{ cnt["order"] }}" />
+        </li>
+    </ul>
+</div>

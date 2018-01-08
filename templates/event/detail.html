@@ -1,0 +1,78 @@
+{% extends "../base.html" %}
+{% block title %}
+    {{ site.name }}
+{% end %}
+{% block scripts %}
+{% end %}
+{% block css %}
+<link type="text/css" href='{{ site_base }}/static/css/event.css' rel='stylesheet' />
+{% end %}
+{% block header %}
+{% include '../home/inside_header.html' %}
+{% end %}
+{% block body %}
+    <div id="wrap">
+        <div class="container-fluid-art cart-list productlist">
+            <div class="row">
+                <div class="col-sm-12 blog-content">
+                    <article>
+                        <header>
+                            <h1 class="h1-art">
+                                {{ event["title"] }}
+                            </h1>
+                            <div class="post-date" style="height: 30px;">
+                            </div>
+                        </header>
+                        
+                        <div class="content articulo-text" style="text-align:left;">
+                            <div class="col-sm-8 content-picture-event" >
+                                <img src="{{ event['image_url'] }}" class="img-responsive lazy no-resize" data-original="{{ event["url"] }}" alt="item">
+                            </div>
+                            <div class="col-sm-4 especial">
+                                <h2 class="h2-event">{{ event["begin"].strftime("%d") }}</h2>
+                                <h2 class="h2-event-mm">{{ event["begin"].strftime("%b") }}</h2>
+                                <p class="p-event">{{event["begin"].strftime("%H:%M")}} Hrs</p>
+                                <p class="p-event">{{event['place']}}</p>
+                                
+                            </div>
+                            <div class="col-sm-12 especial text-left text-content-event">
+                                <p>
+                                    {{ event["description"] }}
+                                </p>
+                            </div>
+                            <div class="col-sm-12 especial">
+                            </div>
+                            <p class="col-sm-12">
+                            </p>
+                            <div class="col-sm-12" style=" background-color: rgb(241, 239, 239);">
+                                <iframe name="event-frame" class="event-frame" src="{{ event["form_url"] }}" frameborder="0" scrolling="no" id="iframe" ></iframe>
+                            </div>
+                            <div class="col-sm-12">
+                                tags | <a>{{ "</a> , <a>".join(event["tags"]) }}</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-3 blog-sidebar">
+                    <div class="widget" style="text-align:left;">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container-fluid productlist">
+            <article>
+                <header>
+                    <h1 style="text-align:left;">Contenido Relacionado</h1>
+                </header>
+            </article>
+            <div class="row cont-rel">
+                {{ content }}
+            </div>
+        </div>
+        <div class="carritoproductos clearfix">
+            <div class="flecha clearfix">
+            </div>
+        </div>
+    </div>
+{% end %}

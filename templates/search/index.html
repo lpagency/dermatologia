@@ -1,0 +1,59 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block header %}
+ {% include '../home/header_inside.html' %}
+{% end %}
+
+
+{% block body %}
+{% if is_admin %}
+    {% set editabletext = 'editabletext' %}
+{% else %}
+    {% set editabletext = '' %}
+{% end %}
+
+
+<section>
+      <div style="position: relative;">
+        {% if is_admin %}
+               <div class="image-upload part1 lapiz visible-movil">
+                   <label for="img_cont_uno">
+                       <img class="change-image" src="https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png" onmouseover="this.src='https://7static.loadingplay.com/static/images/f2e626ad62e2c957b3708a27e55f4b03_btn-edit-hover.png';" onmouseout="this.src='https://7static.loadingplay.com/static/images/ef03c01fe39c6b7d1404e311adfe47ff_btn-edit.png'">
+                   </label>
+                   <input type="file" class="editableimage" image-id="{{ site.name }}_cont_uno" name="image" id="img_cont_uno" >
+               </div>
+        {% end %}
+                <img id="{{ site.name }}_cont_uno" src="{{ read_image(site.name + '_cont_uno', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cont_uno',500) }}'" class="banner_result" alt="item">
+
+                <div class="col-md-12">
+                    <h1 class="text-center titulo-result {{editabletext}}" text-id="{{ site.name + '_til_busqueda' }}"> {{ read_text(site.name +  '_til_busqueda') }}</h1>
+                </div>
+
+       </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="bajada text-center {{editabletext}}" text-id="{{ site.name + '_cont_uno' }}"> {{ read_text(site.name +  '_cont_uno') }} </h1>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            {{ getArticleSearch(search_query) }}
+        </div>
+    </div>
+
+</section>
+
+{% include '../home/footer.html' %}
+
+{% end %}

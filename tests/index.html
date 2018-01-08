@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="qunit/qunit-1.17.1.css">
+</head>
+<body>
+
+    <div id="qunit">
+        <!-- overriden values -->
+        <div class="agencia-comision" >50</div>
+    </div>
+
+
+    <div id="qunit-testrunner-toolbar">
+        <span>jQuery Versions: 
+            <input id="version-191" name="version" type="radio" value="1.9.1" />
+            <label for="version-191">jQuery 1.9.1</label>
+            <input id="version-1102" name="version" type="radio" value="1.10.2" />
+            <label for="version-1102">jQuery 1.10.2</label>
+            <input id="version-1111" name="version" type="radio" value="1.11.1" />
+            <label for="version-1111">jQuery 1.11.1</label>
+            <input id="version-latest" name="version" type="radio" value="latest" />
+            <label for="version-latest">jQuery Latest (git)</label>
+        </span>
+    </div>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <div class="test-front-end" >
+        <!-- PRODUCT -->
+        <style type="text/css">
+        .g-alert{
+            display: none;
+        }
+        </style>
+        <form class="product-add-form" action="/" >
+            <input name="name" />
+            <div for="name" class="error g-alert" >foo</div>
+            <input name="description" />
+            <input name="image" />
+            <div for="image" class="error g-alert" >foo</div>
+            <input name="price" />
+            <div for="price" class="error g-alert" >foo</div>
+            <input name="stock" />
+            <div for="stock" class="error g-alert" >foo</div>
+        </form>
+    </div>
+    <script src="qunit/qunit-1.17.1.js"></script>
+    <script src="jquery.js"></script>
+    <script type="text/javascript" src="/me/static/js/me.js"></script>
+
+    <!-- incluir codigo a testear -->
+    <script type="text/javascript" src="/me/static/js/validation/form_validation.js"></script>
+    <script type="text/javascript" src="/me/static/js/members/add.js"></script>
+    <!-- incluir codigo a testear -->
+
+    <script src="validations.js"></script>
+    <script src="product/add.js"></script>
+    <script src="article/add.js"></script>
+    <script src="banner/add.js"></script>
+    <script src="event/add.js"></script>
+    <script src="gallery/add.js"></script>
+    <script src="members/add.js"></script>
+    <script src="members/picture.js"></script>
+
+
+    <script src="sites.front" ></script>
+
+
+    <script>
+        $(function ()
+        {
+            $("input[name='version']").click(function ()
+            {
+                location.href = "?version=" + $(this).val();
+            });
+
+            var versionPattern = /^[\?|\&]{1}version=(\d{1,2}\.\d{1,2}\.\d{1,2}|latest)/,
+                version = versionPattern.exec(location.search),
+                defaultVersion = "1.11.1";
+
+            if (version != null && version.length > 0)
+            {
+                version = version[1];
+            }
+            else
+            {
+                version = defaultVersion;
+            }
+
+            $("input[value='" + version + "']").attr("checked", "checked");
+        });
+    </script>
+</body>
+</html>
