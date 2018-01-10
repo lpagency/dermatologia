@@ -1676,6 +1676,13 @@ div.image-upload{
 }
 
 @media(max-width:768px){
+    .banner-test {
+    background-attachment: fixed;
+    height: 560px;
+    background-size: contain !important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
     .derma-head{
         position: relative;
         left: 15px;
