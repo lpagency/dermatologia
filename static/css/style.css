@@ -487,7 +487,10 @@ a:hover{
     -ms-filter: grayscale(0%) brightness(65%);
     -o-filter: grayscale(0%) brightness(65%);
 }
-
+.texto-banner-ppal{
+    height: 100px;
+    margin-top:3%;
+}
 
 div.image-upload.part1{
     top: 179px;
