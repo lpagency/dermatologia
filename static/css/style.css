@@ -1381,7 +1381,18 @@ div.image-upload{
         bottom: 115px;
         left: 20px;
    }
-
+.banner-test {
+    background-attachment: fixed;
+    height: 490px;
+    background-size: contain !important;
+    filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%);
+    -o-filter: grayscale(0%) brightness(65%);
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 }
 
 @media (max-width: 1181px){
@@ -1403,7 +1414,18 @@ div.image-upload{
   .ul-1 {
     font-size: 15px;
 }
-  
+  .banner-test {
+    background-attachment: fixed;
+    height: 470px;
+    background-size: contain !important;
+    filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%);
+    -o-filter: grayscale(0%) brightness(65%);
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 
 }
 
@@ -1430,6 +1452,18 @@ div.image-upload{
    .no-dot {
     font-size: 12px;
   }
+    .banner-test {
+    background-attachment: fixed;
+    height: 450px;
+    background-size: contain !important;
+    filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%);
+    -o-filter: grayscale(0%) brightness(65%);
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 }
 
 @media (max-width: 1102px){
@@ -1450,7 +1484,18 @@ div.image-upload{
  .ul-1 {
     font-size: 12px;
 }
-
+  .banner-test {
+    background-attachment: fixed;
+    height: 430px;
+    background-size: contain !important;
+    filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%);
+    -o-filter: grayscale(0%) brightness(65%);
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 }
 
 @media (max-width: 1045px){
@@ -1462,23 +1507,35 @@ div.image-upload{
 
 @media (max-width: 1024px){
     .derma-banner {
-        background-size: contain !important;
-        background-position: initial !important;
-        height: 300px !important;
-        background-repeat: no-repeat !important;
+        background-size: contain;
+        background-position: initial; 
+        height: 436px;
+        background-repeat: no-repeat;
     }
 
     .derma-b{
-        background-size: auto !important;
-        background-position: initial !important;
-        height: 500px !important;
+        background-size: auto;
+        background-position: initial;
+        height: 436px;
     }
 
     .derma-c{
-        background-size: contain !important;
-        background-position: initial !important;
-        height: 430px !important;
+        background-size: contain;
+        background-position: initial;
+        height: 436px;
     }
+    .banner-test {
+    background-attachment: fixed;
+    height: 410px;
+    background-size: contain !important;
+    filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%);
+    -o-filter: grayscale(0%) brightness(65%);
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 }
 
 @media (max-width: 1023px){
@@ -1592,7 +1649,18 @@ div.image-upload{
     padding-left: 0px;
     padding-right: 0px;
 }
-
+.banner-test {
+    background-attachment: fixed;
+    height: 390px;
+    background-size: contain !important;
+    filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%);
+    -o-filter: grayscale(0%) brightness(65%);
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 
 }
 
@@ -1602,6 +1670,35 @@ div.image-upload{
    }
 }
 
+@media (max-width: 900px){
+   .banner-test {
+    background-attachment: fixed;
+    height: 370px;
+    background-size: contain !important;
+    filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%);
+    -o-filter: grayscale(0%) brightness(65%);
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
+}
+@media (max-width: 850px){
+
+   .banner-test {
+    background-attachment: fixed;
+    height: 370px;
+    background-size: contain !important;
+    filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%);
+    -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%);
+    -o-filter: grayscale(0%) brightness(65%);
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
+}
 
 @media  (max-width: 840px){
     .d-o {
@@ -1618,6 +1715,7 @@ div.image-upload{
    .titulo-form {
         left: 28%;
     }
+
 }
 
 
