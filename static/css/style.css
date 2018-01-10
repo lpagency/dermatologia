@@ -432,7 +432,13 @@ a:hover{
 }
 
 /*--------usos---------------*/
-
+.banner-test{
+    background-attachment:fixed; height:710px; background-size:cover !important;  filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%); -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%); 
+    -o-filter: grayscale(0%) brightness(65%); 
+    background-position:center !important;
+}
 .banner_uno_list{
     height: 570px;
     width: 100%;
@@ -760,7 +766,6 @@ ul{
    margin-top: 35px;
 }
 
-
 .mini-art-home{
     height: 213px;
     width: 80%;    
@@ -768,6 +773,9 @@ ul{
     margin-bottom: 20px;
     margin-top: 20px;
     position: relative;
+    border-radius: 10%;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061;
 }
 
 
@@ -780,6 +788,9 @@ ul{
     left: 1px;
     top: 20px;
     margin-bottom: 19px;
+    border-radius: 23px;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061
 }
 
 
@@ -1221,6 +1232,14 @@ div.image-upload{
 }
 
 @media (max-width: 1230px){
+    .banner-test{
+    background-attachment:fixed; height:510px; background-size:contain !important;  filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%); -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%); 
+    -o-filter: grayscale(0%) brightness(65%); 
+    background-position:center; background-repeat: no-repeat !important;
+}
+
     .derma-head {
     right: 0px;
     }
