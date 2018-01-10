@@ -1233,7 +1233,7 @@ div.image-upload{
 
 @media (max-width: 1230px){
     .banner-test{
-    background-attachment:fixed; height:510px; background-size:contain !important;  filter: grayscale(0%) brightness(65%);
+    background-attachment:fixed; height:710px; background-size:contain !important;  filter: grayscale(0%) brightness(65%);
     -webkit-filter: grayscale(0%) brightness(65%); -moz-filter: grayscale(0%) brightness(65%);
     -ms-filter: grayscale(0%) brightness(65%); 
     -o-filter: grayscale(0%) brightness(65%); 
@@ -1383,13 +1383,8 @@ div.image-upload{
    }
 .banner-test {
     background-attachment: fixed;
-    height: 490px;
+    height: 690px;
     background-size: contain !important;
-    filter: grayscale(0%) brightness(65%);
-    -webkit-filter: grayscale(0%) brightness(65%);
-    -moz-filter: grayscale(0%) brightness(65%);
-    -ms-filter: grayscale(0%) brightness(65%);
-    -o-filter: grayscale(0%) brightness(65%);
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1416,13 +1411,8 @@ div.image-upload{
 }
   .banner-test {
     background-attachment: fixed;
-    height: 470px;
+    height: 670px;
     background-size: contain !important;
-    filter: grayscale(0%) brightness(65%);
-    -webkit-filter: grayscale(0%) brightness(65%);
-    -moz-filter: grayscale(0%) brightness(65%);
-    -ms-filter: grayscale(0%) brightness(65%);
-    -o-filter: grayscale(0%) brightness(65%);
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1454,13 +1444,8 @@ div.image-upload{
   }
     .banner-test {
     background-attachment: fixed;
-    height: 450px;
+    height: 650px;
     background-size: contain !important;
-    filter: grayscale(0%) brightness(65%);
-    -webkit-filter: grayscale(0%) brightness(65%);
-    -moz-filter: grayscale(0%) brightness(65%);
-    -ms-filter: grayscale(0%) brightness(65%);
-    -o-filter: grayscale(0%) brightness(65%);
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1486,13 +1471,8 @@ div.image-upload{
 }
   .banner-test {
     background-attachment: fixed;
-    height: 430px;
+    height: 630px;
     background-size: contain !important;
-    filter: grayscale(0%) brightness(65%);
-    -webkit-filter: grayscale(0%) brightness(65%);
-    -moz-filter: grayscale(0%) brightness(65%);
-    -ms-filter: grayscale(0%) brightness(65%);
-    -o-filter: grayscale(0%) brightness(65%);
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1509,30 +1489,25 @@ div.image-upload{
     .derma-banner {
         background-size: contain;
         background-position: initial; 
-        height: 436px;
+        height: 636px;
         background-repeat: no-repeat;
     }
 
     .derma-b{
         background-size: auto;
         background-position: initial;
-        height: 436px;
+        height: 636px;
     }
 
     .derma-c{
         background-size: contain;
         background-position: initial;
-        height: 436px;
+        height: 636px;
     }
     .banner-test {
     background-attachment: fixed;
-    height: 410px;
+    height: 610px;
     background-size: contain !important;
-    filter: grayscale(0%) brightness(65%);
-    -webkit-filter: grayscale(0%) brightness(65%);
-    -moz-filter: grayscale(0%) brightness(65%);
-    -ms-filter: grayscale(0%) brightness(65%);
-    -o-filter: grayscale(0%) brightness(65%);
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1651,13 +1626,8 @@ div.image-upload{
 }
 .banner-test {
     background-attachment: fixed;
-    height: 390px;
+    height: 590px;
     background-size: contain !important;
-    filter: grayscale(0%) brightness(65%);
-    -webkit-filter: grayscale(0%) brightness(65%);
-    -moz-filter: grayscale(0%) brightness(65%);
-    -ms-filter: grayscale(0%) brightness(65%);
-    -o-filter: grayscale(0%) brightness(65%);
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1673,28 +1643,8 @@ div.image-upload{
 @media (max-width: 900px){
    .banner-test {
     background-attachment: fixed;
-    height: 370px;
+    height: 560px;
     background-size: contain !important;
-    filter: grayscale(0%) brightness(65%);
-    -webkit-filter: grayscale(0%) brightness(65%);
-    -moz-filter: grayscale(0%) brightness(65%);
-    -ms-filter: grayscale(0%) brightness(65%);
-    -o-filter: grayscale(0%) brightness(65%);
-    background-position: center;
-    background-repeat: no-repeat !important;
-}
-}
-@media (max-width: 850px){
-
-   .banner-test {
-    background-attachment: fixed;
-    height: 370px;
-    background-size: contain !important;
-    filter: grayscale(0%) brightness(65%);
-    -webkit-filter: grayscale(0%) brightness(65%);
-    -moz-filter: grayscale(0%) brightness(65%);
-    -ms-filter: grayscale(0%) brightness(65%);
-    -o-filter: grayscale(0%) brightness(65%);
     background-position: center;
     background-repeat: no-repeat !important;
 }
