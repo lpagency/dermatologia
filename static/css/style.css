@@ -1560,7 +1560,21 @@ div.image-upload{
 }
 
 @media (max-width: 991px){
-  
+  .mini-art-home{
+
+    border-radius: 10%;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061;
+}
+
+
+
+.mini-art-home-medium{
+    border-radius: 23px;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061
+}
+
     .mini-art-home{
     width: 173px;
     }
@@ -1690,6 +1704,21 @@ div.image-upload{
 }
 
 @media(max-width:768px){
+    .mini-art-home{
+
+    border-radius: 10%;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061;
+}
+
+
+
+.mini-art-home-medium{
+    border-radius: 23px;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061
+}
+
     .banner-test {
     background-attachment: fixed;
     height: 560px;
