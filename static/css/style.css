@@ -1482,6 +1482,20 @@ div.image-upload{
 #footer{
         height: 375px;
 }
+.mini-art-home{
+
+    border-radius: 10%;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061;
+}
+
+
+
+.mini-art-home-medium{
+    border-radius: 23px;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061
+}
 
 }
 
@@ -1671,7 +1685,7 @@ div.image-upload{
 
 @media (max-width: 796px){
     .titulo-2{
-        bottom: 155px;
+        bottom: 195px;
     }
 }
 
@@ -1702,7 +1716,7 @@ div.image-upload{
         top: 0px;
     }
     .titulo-2 {
-        bottom: 155px;
+        bottom: 195px;
     }
     .navbar-collapse.collapse {
     display: none!important;
