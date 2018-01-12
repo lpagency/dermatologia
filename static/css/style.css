@@ -1236,7 +1236,7 @@ div.image-upload{
 
 @media (max-width: 1230px){
     .banner-test{
-    background-attachment:fixed; height:710px; background-size:contain !important;  filter: grayscale(0%) brightness(65%);
+    background-attachment:fixed; height:710px; background-size:cover !important;  filter: grayscale(0%) brightness(65%);
     -webkit-filter: grayscale(0%) brightness(65%); -moz-filter: grayscale(0%) brightness(65%);
     -ms-filter: grayscale(0%) brightness(65%); 
     -o-filter: grayscale(0%) brightness(65%); 
@@ -1387,7 +1387,7 @@ div.image-upload{
 .banner-test {
     background-attachment: fixed;
     height: 690px;
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1415,7 +1415,7 @@ div.image-upload{
   .banner-test {
     background-attachment: fixed;
     height: 670px;
-    background-size: contain !important;
+    background-size: cover!important;
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1448,7 +1448,7 @@ div.image-upload{
     .banner-test {
     background-attachment: fixed;
     height: 650px;
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1475,7 +1475,7 @@ div.image-upload{
   .banner-test {
     background-attachment: fixed;
     height: 630px;
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1524,7 +1524,7 @@ div.image-upload{
     .banner-test {
     background-attachment: fixed;
     height: 610px;
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1658,7 +1658,7 @@ div.image-upload{
 .banner-test {
     background-attachment: fixed;
     height: 590px;
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat !important;
 }
@@ -1675,7 +1675,7 @@ div.image-upload{
    .banner-test {
     background-attachment: fixed;
     height: 560px;
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat !important;
 }
