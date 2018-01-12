@@ -1725,7 +1725,7 @@ div.image-upload{
     .banner-test {
     background-attachment: fixed;
     height: 560px;
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: center;
     background-repeat: no-repeat !important;
 }
