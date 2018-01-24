@@ -30,7 +30,7 @@ blockquote {
 }
 
 .derma-head{
-    bottom: 20px;
+    bottom: 0px;
     padding: 0;
     right: 91px;
 }
@@ -527,7 +527,7 @@ div.image-upload.part1{
 .one
 {
     position: relative;
-    top: 9px;
+    bottom: 9px;
     left: 0px;
     color: #848484;
     font-weight: 300;
