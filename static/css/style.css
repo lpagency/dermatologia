@@ -432,7 +432,13 @@ a:hover{
 }
 
 /*--------usos---------------*/
-
+.banner-test{
+    background-attachment:fixed; height:710px; background-size:cover !important;  filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%); -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%); 
+    -o-filter: grayscale(0%) brightness(65%); 
+    background-position:center !important;
+}
 .banner_uno_list{
     height: 570px;
     width: 100%;
@@ -481,7 +487,10 @@ a:hover{
     -ms-filter: grayscale(0%) brightness(65%);
     -o-filter: grayscale(0%) brightness(65%);
 }
-
+.texto-banner-ppal{
+    height: 100px;
+    margin-top:3%;
+}
 
 div.image-upload.part1{
     top: 179px;
@@ -760,7 +769,6 @@ ul{
    margin-top: 35px;
 }
 
-
 .mini-art-home{
     height: 213px;
     width: 80%;    
@@ -768,6 +776,9 @@ ul{
     margin-bottom: 20px;
     margin-top: 20px;
     position: relative;
+    border-radius: 10%;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061;
 }
 
 
@@ -780,6 +791,9 @@ ul{
     left: 1px;
     top: 20px;
     margin-bottom: 19px;
+    border-radius: 23px;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061
 }
 
 
@@ -1221,6 +1235,14 @@ div.image-upload{
 }
 
 @media (max-width: 1230px){
+    .banner-test{
+    background-attachment:fixed; height:710px; background-size:cover !important;  filter: grayscale(0%) brightness(65%);
+    -webkit-filter: grayscale(0%) brightness(65%); -moz-filter: grayscale(0%) brightness(65%);
+    -ms-filter: grayscale(0%) brightness(65%); 
+    -o-filter: grayscale(0%) brightness(65%); 
+    background-position:center; background-repeat: no-repeat !important;
+}
+
     .derma-head {
     right: 0px;
     }
@@ -1362,7 +1384,13 @@ div.image-upload{
         bottom: 115px;
         left: 20px;
    }
-
+.banner-test {
+    background-attachment: fixed;
+    height: 690px;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 }
 
 @media (max-width: 1181px){
@@ -1384,7 +1412,13 @@ div.image-upload{
   .ul-1 {
     font-size: 15px;
 }
-  
+  .banner-test {
+    background-attachment: fixed;
+    height: 670px;
+    background-size: cover!important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 
 }
 
@@ -1411,6 +1445,13 @@ div.image-upload{
    .no-dot {
     font-size: 12px;
   }
+    .banner-test {
+    background-attachment: fixed;
+    height: 650px;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 }
 
 @media (max-width: 1102px){
@@ -1431,35 +1472,62 @@ div.image-upload{
  .ul-1 {
     font-size: 12px;
 }
-
+  .banner-test {
+    background-attachment: fixed;
+    height: 630px;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 }
 
 @media (max-width: 1045px){
 #footer{
         height: 375px;
 }
+.mini-art-home{
+
+    border-radius: 10%;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061;
+}
+
+
+
+.mini-art-home-medium{
+    border-radius: 23px;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061
+}
 
 }
 
 @media (max-width: 1024px){
     .derma-banner {
-        background-size: contain !important;
-        background-position: initial !important;
-        height: 300px !important;
-        background-repeat: no-repeat !important;
+        background-size: contain;
+        background-position: initial; 
+        height: 636px;
+        background-repeat: no-repeat;
     }
 
     .derma-b{
-        background-size: auto !important;
-        background-position: initial !important;
-        height: 500px !important;
+        background-size: auto;
+        background-position: initial;
+        height: 636px;
     }
 
     .derma-c{
-        background-size: contain !important;
-        background-position: initial !important;
-        height: 430px !important;
+        background-size: contain;
+        background-position: initial;
+        height: 636px;
     }
+    .banner-test {
+    background-attachment: fixed;
+    height: 610px;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 }
 
 @media (max-width: 1023px){
@@ -1495,7 +1563,21 @@ div.image-upload{
 }
 
 @media (max-width: 991px){
-  
+  .mini-art-home{
+
+    border-radius: 10%;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061;
+}
+
+
+
+.mini-art-home-medium{
+    border-radius: 23px;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061
+}
+
     .mini-art-home{
     width: 173px;
     }
@@ -1573,7 +1655,13 @@ div.image-upload{
     padding-left: 0px;
     padding-right: 0px;
 }
-
+.banner-test {
+    background-attachment: fixed;
+    height: 590px;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
 
 }
 
@@ -1583,6 +1671,15 @@ div.image-upload{
    }
 }
 
+@media (max-width: 900px){
+   .banner-test {
+    background-attachment: fixed;
+    height: 560px;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
+}
 
 @media  (max-width: 840px){
     .d-o {
@@ -1599,16 +1696,39 @@ div.image-upload{
    .titulo-form {
         left: 28%;
     }
+
 }
 
 
 @media (max-width: 796px){
     .titulo-2{
-        bottom: 155px;
+        bottom: 195px;
     }
 }
 
 @media(max-width:768px){
+    .mini-art-home{
+
+    border-radius: 10%;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061;
+}
+
+
+
+.mini-art-home-medium{
+    border-radius: 23px;
+    padding-bottom: 0px;
+    box-shadow: 6px 6px 6px 0px #80808061
+}
+
+    .banner-test {
+    background-attachment: fixed;
+    height: 560px;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat !important;
+}
     .derma-head{
         position: relative;
         left: 15px;
@@ -1628,7 +1748,7 @@ div.image-upload{
         top: 0px;
     }
     .titulo-2 {
-        bottom: 155px;
+        bottom: 195px;
     }
     .navbar-collapse.collapse {
     display: none!important;
