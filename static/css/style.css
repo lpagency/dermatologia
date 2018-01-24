@@ -1860,8 +1860,7 @@ div.image-upload{
     bottom: 224px;
     }
     .text-center.titulo-2.editabletext {
-        top: -84px;
-        font-size: 33px;
+        font-size: 45px;
     }
     
     .titulo{
@@ -1913,7 +1912,7 @@ div.image-upload{
     .one {
     font-size: 28px;
     left: 0px;
-    top: 13px;
+    top: -6px;
     width: 70%;
     }
     .derma-head {
