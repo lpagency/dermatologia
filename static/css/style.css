@@ -25,6 +25,11 @@ blockquote {
 
 }
 
+.btn-block{
+    border: solid 1px #ccc;
+    color: #777;
+}
+
 .derma-banner{
     margin-top: -153px;
 }
