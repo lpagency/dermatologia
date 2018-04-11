@@ -1,11 +1,15 @@
 {% extends "../base.html" %}
 
 {% block title %}
-{{ site.name }}
+    {{ site.name }}
 {% end %}
 
 {% block header %}
- {% include '../home/header_inside.html' %}
+    {% include '../home/header_inside.html' %}
+{% end %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/listado_articulos.css">
 {% end %}
 
 
