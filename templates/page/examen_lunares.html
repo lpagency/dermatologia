@@ -18,12 +18,8 @@
 
     function err(x) 
     {
-
         alert("Please select each field in the form " + x);
-
     }
-
-
 
     function r(rr) 
     {
@@ -32,21 +28,13 @@
 
         for (var i = 0; i < rr.length; i++)
         {
-
             if (rr[i].checked) 
             {
-
                 n = parseInt(rr[i].id);
-
             }
-
         }
-
         return n;
-
     }
-
-
 
     function t(rr) {
 
@@ -63,16 +51,14 @@
         }
 
         return n;
-
     }
 
     function env(frm) {
-        if (t(frm.Dropdown)<0 || t(frm.Dropdown2)<0 || t(frm.Dropdown3)<0 || t(frm.Radio6)<0 || t(frm.Dropdown4)<0 || t(frm.Dropdown6)<0) {
-
+        if (t(frm.Dropdown)<0 || t(frm.Dropdown2)<0 || t(frm.Dropdown3)<0 || t(frm.Radio6)<0 || t(frm.Dropdown4)<0 || t(frm.Dropdown6)<0)
+        {
             alert("Por favor responda todas las preguntas.");
 
             return false;
-
         }
     }
 
@@ -83,7 +69,6 @@
             alert("Por favor responda todas las preguntas.");
 
             return false;
-
         }
 
         risklevel = new Array("minimo", "moderado", "alto", "muy alto");
@@ -94,14 +79,9 @@
 
         var rl = 0;
 
-
-
         window.v1 =  r(frm.Radio) + t(frm.Dropdown) + r(frm.Radio1) + r(frm.Radio3) + r(frm.Radio5);
 
         window.v1 += t(frm.Dropdown2) + t(frm.Dropdown3) + r(frm.Radio6) + t(frm.Dropdown4) + t(frm.Dropdown5) + t(frm.Dropdown6);
-
-
-
 
         if (r(frm.Radio1) != 0)  v1 += r(frm.Radio2);
 
@@ -109,11 +89,7 @@
 
         if (r(frm.Radio5) != 0)  v1 += t(frm.Dropdown1);
 
-
-
         frm.SingleLine.value = window.v1;
-
-
 
         while(window.v1 > score[rl]) {
 
@@ -125,9 +101,7 @@
         prop += "Usted tiene que realizarce un autoexamen todos los meses " + act[rl];
 
         alert(prop);
-
     }
-
 </SCRIPT>
 
 <script type="text/javascript">
@@ -615,5 +589,4 @@
 
 </div>
 {% include '../home/footer.html' %}
-
 {% end %}
