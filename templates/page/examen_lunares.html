@@ -8,6 +8,15 @@
  {% include '../home/header_inside.html' %}
 {% end %}
 
+{% block css %}
+
+{% if is_admin %}
+{% end %}
+<link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/listado_articulos.css">
+
+{% end %}
+
+
 {% block javascript %}
 <SCRIPT language=JavaScript>
 
@@ -174,7 +183,7 @@ alert(prop);
 
 <div class="container">
   <TABLE cellSpacing=0 cellPadding=0 width=703 bgColor=#000000 border=0 class="desk-form hidden-sm hidden-xs">
-      <div align="center"><strong class="titulo-form"><font color="#CCCCCC" size="3" face="Arial, Helvetica, sans-serif">
+      <div align="inhirit"><strong class="titulo-form"><font color="#CCCCCC" size="3" face="Arial, Helvetica, sans-serif">
 
         AUTO EVALUACION DE CANCER DE PIEL </font></strong>
       </div>
@@ -389,231 +398,231 @@ alert(prop);
         </TBODY>
   </TABLE>
 
-</div>
-<!--MOVIL!!!-->
+  <!--MOVIL!!!-->
 
-<div class="mobile-form hidden-lg">
-  <form action='https://forms.zohopublic.com/sytes/form/dermatologiaexamendelunares/formperma/DCmk121g18_EAabD2K959C3Ek/htmlRecords/submit' name=frm id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data' onSubmit="zf_validateandsubmitdata();">
-    <div class="clearfix" style="padding-bottom: 30px">
-    </div>
-    <div class="subtitulo-titulo-form">
-      Nivel de educacion completa
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <INPUT type=radio CHECKED value="basico" name="Radio" id=1> Basico
-      <INPUT type=radio value="medio" name="Radio" id=2> Medio
-      <INPUT type=radio value="universidad" name="Radio" id=3> Universidad
-      <INPUT type=radio value="post grado" name="Radio" id=4> Post Grado
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Cuando tiene exposicion solar
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <SELECT name="Dropdown" style="border: 1px solid grey; width: 70%">
-        <option id=-1 selected>--- Seleccionar ---</option>
-        <option value="Siempre me quemo, nunca me bronceo" id=6>Siempre me quemo, nunca me bronceo</option>
-        <option value="Habitualmente me quemo, me bronceo con dificultad" id=5>Habitualmente me quemo, me bronceo con dificultad</option>
-        <option value="A veces me quemo, habitualmentemente me bronceo" id=4>A veces me quemo, habitualmentemente me bronceo</option>
-        <option value="Ocasionalmente me quemo, habitualmente me bronceo oscuro" id=3>Ocasionalmente me quemo, habitualmente me bronceo oscuro</option>
-        <option value="Rara vez me quemo, siempre me bronceo" id=2>Rara vez me quemo, siempre me bronceo</option>
-        <option value="(Si usted es de raza negra) marque aqui" id=1>(Si usted es de raza negra) marque aqui</option>
-      </SELECT>
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Alguna vez a tenido cancer de piel?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <input type=radio id=3 name="Radio1" value="Si">Si
+  <div class="mobile-form hidden-lg">
+    <form action='https://forms.zohopublic.com/sytes/form/dermatologiaexamendelunares/formperma/DCmk121g18_EAabD2K959C3Ek/htmlRecords/submit' name=frm id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data' onSubmit="zf_validateandsubmitdata();">
+      <div class="clearfix" style="padding-bottom: 30px">
+      </div>
+      <div class="subtitulo-titulo-form">
+        Nivel de educacion completa
+      </div>
       <br>
-      <INPUT onclick="frm.Radio2[1].checked = 'true'" type=radio CHECKED id=0 name="Radio1" value="No"> No 
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Si es si, fue melanoma?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <INPUT onclick="frm.Radio1[0].checked = 'true'" type=radio id=5 value="Si" name=Radio2>Si
-      <BR>
-      <INPUT type=radio CHECKED id=0 value="No" name=Radio2> No 
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Algun miembro de su familia ha tenido cancer de piel?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <INPUT type=radio id=1 value="Si" name=Radio3> Si
-      <BR>
-      <INPUT onclick="frm.Radio4[1].checked = 'true'" type=radio CHECKED id=0 value="No" name=Radio3> No 
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Si es si, fue melanoma?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <INPUT onclick="frm.Radio3[0].checked = 'true'" type=radio id=2 value="Si" name=Radio4> Si
-      <BR>
-      <INPUT type=radio CHECKED id=0 value="No" name=Radio4> No 
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Usted tiene un padre, un hermano o un hijo que ha tenido un melanoma (lunar canceroso)?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <INPUT type=radio id=4 value="Si" name=Radio5>Si
-      <BR>
-      <INPUT type=radio CHECKED id=0 value="No" name=Radio5> No </TD>
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Si hay mas de uno cuantos fueron?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <SELECT onchange="frm.Radio5[0].checked = 'true'" name="Dropdown1" style="border: 1px solid grey;">
-        <option id="0" selected>-</option>
-        <option id="1" value="1">1</option>
-        <option id="2" value="2">2</option>
-        <option id="3" value="3 o mas">3 or more</option>
-      </SELECT>
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Cu&aacute;ntos lunares oscuros tiene usted que sean mayores a 3 mil&iacute;metros de diametro ?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <SELECT name="Dropdown2" style="border: 1px solid grey">
-        <option id="-1" selected>--- Seleccionar ---</option>
-        <option value="No" id="0">No</option>
-        <option value="Menos de 20" id="1">Menos de 20</option>
-        <option value="20 a 29" id="2">20 a 29</option>
-        <option value="30 a 39" id="3">30 a 39</option>
-        <option value="40 a 49" id="4">40 a 49</option>
-        <option value="50 o mas" id="5">50 o m&aacute;s</option>
-      </SELECT>
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Cu&aacute;ntos lunares oscuros tiene usted que sean mayores a 6 mil&iacute;metros de diametro ?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <SELECT name="Dropdown3" style="border: 1px solid grey">
-        <option id="-1" selected>--- Seleccionar ---</option>
-        <option value="Ninguno" id="0">Ninguno</option>
-        <option value="1 - 5" id="1">1 - 5</option>
-        <option value="6 - 9" id="2">6 - 9</option>
-        <option value="10 o mas" id="3">10 o m&aacute;s</option>
-      </SELECT> 
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      En los ultimos 5 a&ntilde;os usted ha presentado quemaduras solares ?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <INPUT type=radio id=2 value="Si" name=Radio6>Si
-      <BR>
-      <INPUT type=radio CHECKED id=0 value="No" name=Radio6> No 
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      En los ultimos 5 a&ntilde;os usted cuantas veces se ha quemado con sol ?
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <SELECT name=Dropdown4 style="border: 1px solid grey">
-        <option id="-1" selected>--- Seleccionar ---</option>
-        <option id="2" value="Frecuentemente">Frecuentemente</option>
-        <option id="1" value="Ocasionalmente">Ocasionalmente</option>
-        <option id="0" value="Nunca">Nunca</option>
-      </SELECT>
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Color de pelo (natural, antes de las canas ):
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <SELECT name=Dropdown5 style="border: 1px solid grey">
-        <option id="-1" selected>--- Seleccionar ---</option>
-        <option value="Negro" id="0">Negro</option>
-        <option value="Cafe" id="1">Caf&eacute;</option>
-        <option value="Rubio" id="2">Rubio</option>
-        <option value="Pelirojo" id="3">Pelirojo</option>
-      </SELECT> 
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Color de ojos:
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <SELECT name=Dropdown6 style="border: 1px solid grey">
-        <option id="-1" selected>--- Seleccionar ---</option>
-        <option value="Verde" id="2">Verde</option>
-        <option value="Azul" id="3">Azul</option>
-        <option value="Castaño" id="2">Casta&ntilde;o</option>
-        <option value="Cafe" id="1">Caf&eacute;</option>
-        <option value="Gris" id="3">Gris</option>
-      </SELECT>
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Nombre:
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <input type="text" class="nombres" maxlength="255" name="Name_First" invlovedinsalesiq=false  fieldType=7 required />
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Apellido:
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <input type="text" class="nombres" maxlength="255" name="Name_Last" invlovedinsalesiq=false  fieldType=7 required />
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Email:
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <input type="text" class="nombres" maxlength="255" name="Email" value="" invlovedinsalesiq=false  fieldType=9 required />
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Telefono:
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <input type="text" class="nombres" name="Number" value="" maxlength="18" required />
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      Total score: <INPUT size=5 value=0 name=SingleLine class="box">
-      <font color="#0066CC">
-        <strong>( RECUERDE SU SCORE )</strong>
-      </font>
-    </div>
-    <br>
-    <div class="subtitulo-titulo-form">
-      <INPUT onclick=Calc(this.form) type=submit value=Calcular name=calc class="box">
-      <INPUT onclick=env(this.form) type=submit value=Enviar name=submit class="box">
-    </div>
-  </form>
-</div>
+      <div class="subtitulo-titulo-form">
+        <INPUT type=radio CHECKED value="basico" name="Radio" id=1> Basico
+        <INPUT type=radio value="medio" name="Radio" id=2> Medio
+        <INPUT type=radio value="universidad" name="Radio" id=3> Universidad
+        <INPUT type=radio value="post grado" name="Radio" id=4> Post Grado
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Cuando tiene exposicion solar
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <SELECT name="Dropdown" style="border: 1px solid grey; width: 70%">
+          <option id=-1 selected>--- Seleccionar ---</option>
+          <option value="Siempre me quemo, nunca me bronceo" id=6>Siempre me quemo, nunca me bronceo</option>
+          <option value="Habitualmente me quemo, me bronceo con dificultad" id=5>Habitualmente me quemo, me bronceo con dificultad</option>
+          <option value="A veces me quemo, habitualmentemente me bronceo" id=4>A veces me quemo, habitualmentemente me bronceo</option>
+          <option value="Ocasionalmente me quemo, habitualmente me bronceo oscuro" id=3>Ocasionalmente me quemo, habitualmente me bronceo oscuro</option>
+          <option value="Rara vez me quemo, siempre me bronceo" id=2>Rara vez me quemo, siempre me bronceo</option>
+          <option value="(Si usted es de raza negra) marque aqui" id=1>(Si usted es de raza negra) marque aqui</option>
+        </SELECT>
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Alguna vez a tenido cancer de piel?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <input type=radio id=3 name="Radio1" value="Si">Si
+        <br>
+        <INPUT onclick="frm.Radio2[1].checked = 'true'" type=radio CHECKED id=0 name="Radio1" value="No"> No 
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Si es si, fue melanoma?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <INPUT onclick="frm.Radio1[0].checked = 'true'" type=radio id=5 value="Si" name=Radio2>Si
+        <BR>
+        <INPUT type=radio CHECKED id=0 value="No" name=Radio2> No 
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Algun miembro de su familia ha tenido cancer de piel?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <INPUT type=radio id=1 value="Si" name=Radio3> Si
+        <BR>
+        <INPUT onclick="frm.Radio4[1].checked = 'true'" type=radio CHECKED id=0 value="No" name=Radio3> No 
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Si es si, fue melanoma?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <INPUT onclick="frm.Radio3[0].checked = 'true'" type=radio id=2 value="Si" name=Radio4> Si
+        <BR>
+        <INPUT type=radio CHECKED id=0 value="No" name=Radio4> No 
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Usted tiene un padre, un hermano o un hijo que ha tenido un melanoma (lunar canceroso)?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <INPUT type=radio id=4 value="Si" name=Radio5>Si
+        <BR>
+        <INPUT type=radio CHECKED id=0 value="No" name=Radio5> No </TD>
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Si hay mas de uno cuantos fueron?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <SELECT onchange="frm.Radio5[0].checked = 'true'" name="Dropdown1" style="border: 1px solid grey;">
+          <option id="0" selected>-</option>
+          <option id="1" value="1">1</option>
+          <option id="2" value="2">2</option>
+          <option id="3" value="3 o mas">3 or more</option>
+        </SELECT>
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Cu&aacute;ntos lunares oscuros tiene usted que sean mayores a 3 mil&iacute;metros de diametro ?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <SELECT name="Dropdown2" style="border: 1px solid grey">
+          <option id="-1" selected>--- Seleccionar ---</option>
+          <option value="No" id="0">No</option>
+          <option value="Menos de 20" id="1">Menos de 20</option>
+          <option value="20 a 29" id="2">20 a 29</option>
+          <option value="30 a 39" id="3">30 a 39</option>
+          <option value="40 a 49" id="4">40 a 49</option>
+          <option value="50 o mas" id="5">50 o m&aacute;s</option>
+        </SELECT>
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Cu&aacute;ntos lunares oscuros tiene usted que sean mayores a 6 mil&iacute;metros de diametro ?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <SELECT name="Dropdown3" style="border: 1px solid grey">
+          <option id="-1" selected>--- Seleccionar ---</option>
+          <option value="Ninguno" id="0">Ninguno</option>
+          <option value="1 - 5" id="1">1 - 5</option>
+          <option value="6 - 9" id="2">6 - 9</option>
+          <option value="10 o mas" id="3">10 o m&aacute;s</option>
+        </SELECT> 
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        En los ultimos 5 a&ntilde;os usted ha presentado quemaduras solares ?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <INPUT type=radio id=2 value="Si" name=Radio6>Si
+        <BR>
+        <INPUT type=radio CHECKED id=0 value="No" name=Radio6> No 
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        En los ultimos 5 a&ntilde;os usted cuantas veces se ha quemado con sol ?
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <SELECT name=Dropdown4 style="border: 1px solid grey">
+          <option id="-1" selected>--- Seleccionar ---</option>
+          <option id="2" value="Frecuentemente">Frecuentemente</option>
+          <option id="1" value="Ocasionalmente">Ocasionalmente</option>
+          <option id="0" value="Nunca">Nunca</option>
+        </SELECT>
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Color de pelo (natural, antes de las canas ):
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <SELECT name=Dropdown5 style="border: 1px solid grey">
+          <option id="-1" selected>--- Seleccionar ---</option>
+          <option value="Negro" id="0">Negro</option>
+          <option value="Cafe" id="1">Caf&eacute;</option>
+          <option value="Rubio" id="2">Rubio</option>
+          <option value="Pelirojo" id="3">Pelirojo</option>
+        </SELECT> 
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Color de ojos:
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <SELECT name=Dropdown6 style="border: 1px solid grey">
+          <option id="-1" selected>--- Seleccionar ---</option>
+          <option value="Verde" id="2">Verde</option>
+          <option value="Azul" id="3">Azul</option>
+          <option value="Castaño" id="2">Casta&ntilde;o</option>
+          <option value="Cafe" id="1">Caf&eacute;</option>
+          <option value="Gris" id="3">Gris</option>
+        </SELECT>
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Nombre:
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <input type="text" class="nombres" maxlength="255" name="Name_First" invlovedinsalesiq=false  fieldType=7 required />
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Apellido:
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <input type="text" class="nombres" maxlength="255" name="Name_Last" invlovedinsalesiq=false  fieldType=7 required />
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Email:
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <input type="text" class="nombres" maxlength="255" name="Email" value="" invlovedinsalesiq=false  fieldType=9 required />
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Telefono:
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <input type="text" class="nombres" name="Number" value="" maxlength="18" required />
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        Total score: <INPUT size=5 value=0 name=SingleLine class="box">
+        <font color="#0066CC">
+          <strong>( RECUERDE SU SCORE )</strong>
+        </font>
+      </div>
+      <br>
+      <div class="subtitulo-titulo-form">
+        <INPUT onclick=Calc(this.form) type=submit value=Calcular name=calc class="box">
+        <INPUT onclick=env(this.form) type=submit value=Enviar name=submit class="box">
+      </div>
+    </form>
+  </div>
 
+</div>
 {% include '../home/footer.html' %}
 
 {% end %}

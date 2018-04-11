@@ -7,7 +7,13 @@
 {% block header %}
  {% include '../home/header_inside.html' %}
 {% end %}
+{% block css %}
 
+{% if is_admin %}
+{% end %}
+<link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/listado_articulos.css">
+
+{% end %}
 
 {% block body %}
 {% if is_admin %}
