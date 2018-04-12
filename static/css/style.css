@@ -164,14 +164,18 @@ li.pas:hover{
 }
 
 
-a{
-    color:white !important;
+.pas a{
+    color: white;
     text-decoration: none !important ;
 
 }
 
 a:hover{
-     color: white!important;
+    color: white;
+}
+
+.bajada-2 a:hover{
+    color: #646464;
 }
 
 .whi{
