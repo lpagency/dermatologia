@@ -170,11 +170,18 @@ li.pas:hover{
 
 }
 
-a:hover{
+a:hover
+{
     color: white;
 }
 
-.bajada-2 a:hover{
+.p-art a
+{
+    color: #2a6496;
+}
+
+.bajada-2 a:hover
+{
     color: #646464;
     text-decoration: none;
 }
