@@ -5,6 +5,7 @@
 DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 PROJECT="$(echo $(cut -d'/' -f1 <<< $(echo $DIRECTORY | rev) ) | rev)"
 tag=QA
+DO_TAG=ondev
 add_hosts=
 WORKING_DIR="/var/www/agency"
 DEPLOY_KEY="$HOME/.ssh/deploy"
@@ -24,8 +25,19 @@ done
 
 # switch to production configuration
 if [[ $tag == "PROD" ]]; then
-    SERVER_IPS=$(curl -XGET https://loadingplay.github.io/deploy/prod.txt)
+    DO_TAG=jedi
 fi
+
+SERVER_IPS=$(curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $DO_KEY" "https://api.digitalocean.com/v2/droplets?tag_name=$DO_TAG" | \
+python3 -c "
+import sys, json
+json_data = json.load(sys.stdin)
+for x in json_data['droplets']:
+    for n in x['networks']['v4']:
+        if n['type'] == 'public':
+            print(n['ip_address'])
+")
+
 
 # add hosts if neccesary
 if [[ $add_hosts ]]; then
